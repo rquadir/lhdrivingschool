@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href=@Url.Content("/Content/js/assets/owl.carousel/dist/assets/owl.carousel.min.css") type="text/css" />
+    <link rel="stylesheet" href=@Url.Content("/Content/js/assets/owl.carousel/dist/assets/owl.theme.default.min.css")>
+    <link rel="stylesheet" href=@Url.Content("/Content/css/style.css?v=1.0")>
+    <link rel="shortcut icon" type="image/x-icon" href=@Url.Content("/Content/img/logo/logo.ico")>
+</head>
+
+    <body>
+        <div id="floatingHeader" class="floatingHeader" style="padding: 0px;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0px;">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><img src=@Url.Content("/Content/img/logo/logo.png") width="100px" alt=""></a>
+                    <div class="title">
+                        <h2 style="font-family: 'Lobster', cursive; color: #B81405;"><b>Long Horn Driving School</b></h2>
+                        <h6 style="font-family: 'Lobster', cursive; color: #033470;"> <b></b>Your Friendly, Expart Driving School</b></h6>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentFloating" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active" style=" padding-left: 140px;">
+                                <a class="nav-link" href="/home/index" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"> <b>HOME</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/about" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>ABOUT</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/driversEducation" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>DRIVERS EDUCATION</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/contact" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>CONTACT</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" target="_DPS" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>DPS</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://impacttexasdrivers.dps.texas.gov/" target="_ITD" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>ITD</b></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- container end -->
+            </nav>
+        </div>
+
+        <!-- ===========================================
+                        Header area start
+    =============================================== !---->
+        <header>
+            <div class="container">
+                <div class="header-icon">
+                    <i class="fas fa-address-book"></i><span class="tx1"> Road 00, House 00, Block 0, Texas </span>
+                    <i class="fas fa-phone-volume phone" style="color:white;font-size: 22px"></i><span class="tx2"> +00 00 0000000 </span>
+                    <i class="far fa-envelope"></i><span class="tx3"> info@lhdrivingschool.com</span>
+                    <i class="fas fa-clock"></i><span class="TX4"> 8:00 AM to 5:00 PM / 7 Days</span>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===========================================
+                        Navbar area start
+    =============================================== !---->
+
+        <div id="test">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 10px; ">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><img src=@Url.Content("/Content/img/logo/logo.png") width="100px" alt=""></a>
+                    <div class="title">
+                        <h2 style="font-family: 'Lobster', cursive; color: #B81405;"><b>Long Horn Driving School</b></h2>
+                        <h6 style="font-family: 'Lobster', cursive; color: #033470;"> <b></b>Your Friendly, Expart Driving School</b></h6>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentFloating" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active" style=" padding-left: 140px;">
+                                    <a class="nav-link" href="/home/index" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"> <b>HOME</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home/about" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>ABOUT</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home/driversEducation" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>DRIVERS EDUCATION</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home/contact" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>CONTACT</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" target="_DPS" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>DPS</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://impacttexasdrivers.dps.texas.gov/" target="_ITD" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>ITD</b></a>
+                                </li>
+                            </ul>
+                        </div>
+                   
+
+                </div><!-- container end -->
+            </nav>
+        </div>
+
+
+      <div>
+          @RenderBody();
+      </div>
+
+
+        <!--footer starts from here-->
+        <footer class="footer">
+            <div class="container bottom_border">
+                <div class="row">
+                    <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                        <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                        <!--headin5_amrc-->
+                        <p class="mb10">Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
+                        <p><i class="fa fa-location-arrow"></i> Road 00, House 00, Block 0, Texas </p>
+                        <p><i class="fa fa-phone"></i>  +00 00 0000000  </p>
+                        <p><i class="fa fa fa-envelope"></i> info@lhdrivingschool.com  </p>
+
+
+                    </div>
+
+
+                    <div class=" col-sm-4 col-md  col-6 col">
+                        <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                        <!--headin5_amrc-->
+                        <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
+                        <!--footer_ul_amrc ends here-->
+                    </div>
+
+
+                    <div class=" col-sm-4 col-md  col-6 col">
+                        <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                        <!--headin5_amrc-->
+                        <ul class="footer_ul_amrc">
+                            <li><a href="#">Dummy Paragraph Text</a></li>
+                            <li><a href="#">Dummy Paragraph Text</a></li>
+                            <li><a href="#">Dummy Paragraph Text</a></li>
+                            <li><a href="#">Dummy Paragraph Text</a></li>
+                            <li><a href="#">Dummy Paragraph Text</a></li>
+                            <li><a href="#">Dummy Paragraph Text</a></li>
+                        </ul>
+                        <!--footer_ul_amrc ends here-->
+                    </div>
+
+
+                    <div class=" col-sm-4 col-md  col-12 col">
+                        <h5 class="headin5_amrc col_white_amrc pt2">Information</h5>
+                        <!--headin5_amrc ends here-->
+                        <p>
+                            FAQ<br>
+                            Locations<br>
+                            Testimonials
+                        </p>
+                        <!--footer_ul2_amrc ends here-->
+                    </div>
+                </div>
+                <!-- Start Scroll To Top -->
+                <div class="backtotop_button_wrap">
+                    <div class="backtotop_button_height">
+                        <div id="toTop"><i class="fa fa-long-arrow-up"></i></div>
+                    </div>
+                </div>
+                <!-- end Scroll To Top -->
+            </div><!-- container end -->
+
+
+            <div class="container">
+                <ul class="foote_bottom_ul_amrc">
+                    <li><a href="/home/index">Home</a></li>
+                    <li><a href="/home/about">About Us</a></li>
+                    <li><a href="/home/driversEducation">Drivers Education</a></li>
+                    <li><a href="/home/contact">Contact</a></li>
+                    <li><a href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" target="_blank">DPS</a></li>
+                    <li><a href="https://impacttexasdrivers.dps.texas.gov/" target="_blank">ITD</a></li>
+                    
+
+                </ul>
+                <!--foote_bottom_ul_amrc ends here-->
+
+                <p class="text-center"> © Copyright <b>Long Horn Driving School</b>. All rights reserved. </p>
+
+                <ul class="social_footer_ul">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+                <!--social_footer_ul ends here-->
+            </div>
+
+        </footer>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src=@Url.Content("/Content/js/assets/owl.carousel/dist/owl.carousel.min.js")></script>
+        <script src=@Url.Content("/Content/js/app.js?v=1.0")></script>
+
+    </body>
+</html>

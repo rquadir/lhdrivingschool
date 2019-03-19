@@ -1,0 +1,83 @@
+﻿
+@{
+    //ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+    Page.Title = "Long Horn Driving School :: Contact Page";
+}
+
+<!--=========================contact from ============================= -->
+<section class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="from-title">
+                    <h2>Get in Touch</h2>
+                    <p>If you want to ask a question send a message or submit a testimonial, please use the online form below.</p>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <input id="name" type="text" class="form-control" placeholder="Your Name*">
+
+                    </div>
+                    <div class="form-group">
+                        <input id="email" type="text" class="form-control" placeholder="Your Email*">
+
+                    </div>
+                    <div class="form-group">
+                        <input id="phone" type="text" class="form-control" placeholder="Your Phone">
+
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" class="form-control" placeholder="Your Message" rows="6"></textarea>
+
+
+                    </div>
+
+
+                    <button id="sendbtn" type="submit" class="button btn btn-primary" onclick="sendbtn_Click" >Submit</button>
+                    <button id="resetbtn" type="reset" class="button btn btn-primary">Reset</button>
+
+                </form>
+            </div><!-- col-md-5 -->
+
+            <div class="col-md-3">
+                <div class="from-list">
+                    <h2>Our Office</h2>
+                    <ul>
+                        <li>
+                            <i class="fab fa-accusoft"></i>
+                            <span class="our-list">Apt B5, Green Primavera, Road 17, House 35, Block E Banani, Dhaka-1213, Bangladesh.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-volume"></i>
+                            <span class="our-list">PHONE 24/7 <br /> +88 02 9888724</span>
+                        </li>
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <span class="our-list">
+                                OPERATING HOURS
+                                Monday 9:30AM–6:30PM
+                                Tuesday 9:30AM–6:30PM
+                                Wednesday 9:30AM–6:30PM
+                                Thursday 9:30AM–6:30PM
+                                Friday 9:30AM–6:30PM
+                                Saturday 9:30AM–6:30PM
+                                Sunday 9:30AM–6:30PM
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- col-md-3  -->
+ 
+            <div class="col-md-4"> 
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.721189657031!2d90.40581151450299!3d23.79292619306845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c709539bb0cd%3A0xe1c71959670e7e52!2sSimplexhub+Limited!5e0!3m2!1sbn!2sbd!4v1550947613373" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+            </div><!-- col-md-4 -->
+
+
+        </div><!-- row end -->
+    </div><!--container end -->
+</section><!-- contact fromend -->
+
