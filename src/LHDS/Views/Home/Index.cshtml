@@ -1,381 +1,64 @@
-﻿
-@{
-    //ViewBag.Title = "Index";
+﻿@{
     Layout = "~/Views/Shared/_MyLayout.cshtml";
-    Page.Title = "Long Horn Driving School :: Index Page";
+    Page.Title = "Long Horn Driving School :: Home Page";
 }
+<!-- Responsive slider - START -->
+            <div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
+                <div class="slides" data-group="slides">
+                    <ul>
+                        <li>
+                            <div class="slide-body" data-group="slide">
+                                <div class="parallax-overlay" style="background-color:rgba(0,0,0,.74);"></div>
+                                <img src=@Url.Content("/Content/assets/images/bgs/slider/slide-1.jpg") />
+                                <div class="holdcenter">
+                                    <div class="caption header" data-animate="slideAppearLeftToRight" data-delay="500" data-length="300">
+                                        <h1>
+                                            Welcome To<br>
+                                            <span class="blue">Long Horn Driving School</span>
+                                        </h1>
+                                        <a href="services" class="btn main-bg btn-lg btn-3d uppercase">Learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
 
-<!-- ===========================================
-                       Banner area start
-   =============================================== !---->
-<section class="banner">
-    <img src=@Url.Content("/Content/img/home/banner.png") width="100%" height="550px;" alt="banner-photo">
+                        <li>
+                            <div class="slide-body" data-group="slide">
+                                <div class="parallax-overlay" style="background-color:rgba(0,0,0,.74);"></div>
+                                <img src=@Url.Content("/Content/assets/images/bgs/slider/slide-11.jpg") />
+                                <div class="holdcenter">
+                                    <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                                        <h1>
+                                            Our Vision<br>
+                                            <span class="blue">Vision is the true creative rhythm</span>
+                                        </h1>
+                                        <a href="vision" class="btn main-bg btn-lg btn-3d uppercase">Read more</a>    
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
 
-</section>
-
-<!-- ===========================================
-                    Welcome area start
-=============================================== !---->
-<div class="welcome-area-start" style="font-family: 'El Messiri', sans-serif; font-size: 20px;">
-    <h2 style="font-family: 'El Messiri', sans-serif;"><span class="color"><b>Our Vision</b></h2>
-    <h4 style="padding: 0 150px;">DRIVING is one of the MOST IMPORTANT SKILLS that a person can possess in his or her lifetime. With excellent driver education and driver training we can make a difference and assist in minimizing traffic collisions. Safety is our highest priority.</h4>
-</div><!-- welcome-area-end -->
-<!-- ===========================================
-                    Icon area start
-=============================================== !---->
-<section class="icon-area" style="font-family: 'El Messiri', sans-serif; font-size: 20px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="media">
-                    <i class="far fa-address-book"></i>
-                    <div class="media-body">
-                        <span class="number">00</span>
-                        <h5 class="mt-0">Teachers</h5>
-                    </div>
+                        <li>
+                            <div class="slide-body" data-group="slide">
+                                <div class="parallax-overlay" style="background-color:rgba(0,0,0,.74);"></div>
+                                <img src=@Url.Content("/Content/assets/images/bgs/slider/slide-5.jpg") />
+                                <div class="holdcenter">
+                                    <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                                        <h1>
+                                            Our Commitment<br>
+                                            <span class="blue">Commitment is an act, not a word</span>
+                                        </h1>
+                                        <a href="commitment" class="btn main-bg btn-lg btn-3d uppercase">Read more</a>        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </div><!-- col-md-3 -->
-            <div class="col-md-3">
-                <div class="media">
-                    <i class="far fa-address-book"></i>
-                    <div class="media-body">
-                        <span class="number">0000</span>
-                        <h5 class="mt-0">Training Hours</h5>
-                    </div>
-                </div>
-            </div><!-- col-md-3 -->
-            <div class="col-md-3">
-                <div class="media">
-                    <i class="far fa-address-book"></i>
-                    <div class="media-body">
-                        <span class="number">0</span>
-                        <h5 class="mt-0">Working Years</h5>
-                    </div>
-                </div>
-            </div><!-- col-md-3 -->
-            <div class="col-md-3">
-                <div class="media">
-                    <i class="far fa-address-book"></i>
-                    <div class="media-body">
-                        <span class="number">0000+</span>
-                        <h5 class="mt-0">Licenses Issued</h5>
-                    </div>
-                </div>
-            </div><!-- col-md-3 -->
 
-        </div><!-- row end -->
-    </div><!-- container end -->
+                <a class="slider-control left" href="#" data-jump="prev"><</a>
+                <a class="slider-control right" href="#" data-jump="next">></a>
+            </div> 
+<!-- Responsive slider - END -->
 
-</section><!-- icon end --> <br />
-<p style="padding: 0 150px; text-align: center; font-family: 'El Messiri', sans-serif; font-size: 20px; color: #354143;">We're committed to our mission of improving driving skills for Texas drivers through education using a comprehensive curriculum that covers the legal and practical aspects of driving and promotes core values of community, respect, self-discipline, and personal responsibility. Better drivers improve road safety for everyone and, ultimately, save lives.</p>
-<!-- ===========================================
-                      Car area start
-  =============================================== !---->
-<section class="car-content" style="font-family: 'El Messiri', sans-serif; font-size: 20px; color: #354143;">
-    <div class="container">
-
-        <div class="box">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src=@Url.Content("/Content/img/home/car.png") width="100%" alt="car-photo">
-                </div>
-                <div class="col-md-6">
-                    <h2> <b>In-Car Training</b></h2>
-                    <p>Behind-the-Wheel</p>
-                    <p>Learn to drive safely, with confidence and precision.</p>
-                    <p>Students will learn the basic driving skills to operate a motor vehicle SAFELY and proper driving techniques. Course includes DMV drive test preparation and an introduction to defensive driving. Program is divided into 2-hour sessions.</p>
-                </div>
-            </div><!--row end -->
-        </div><!-- box --->
-    </div>
-</section><!-- car content end-->
-<!-- ===========================================
-                    School mission area start
-=============================================== !---->
-
-
-<section class="car-content" style="font-family: 'El Messiri', sans-serif; font-size: 20px; color: #354143;">
-    <div class="container">
-
-        <div class="box1">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2><b>Our Driving Instructors:</b></h2>
-                    <p>We have certified Professional Instructors. All of our instructors have a genuine concern for traffic safety and are dedicated to helping develop the necessary skills to become a defensive driver.</p>
-
-                    <h2><b>Fees:  Behind the-Wheel Training Program:</b></h2>
-                    <table border="10" style="border-color: #354143;">
-                        <tr >
-                            <td style="padding: 0px 20px;">$280.00</td>
-                            <td style="padding: 0px 20px;">6 Hour Course- with car for test.</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0px 20px;">$440.00</td>
-                            <td style="padding: 0px 20px;">10 Hour Course- with car for test.</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0px 20px;">$600.00</td>
-                            <td style="padding: 0px 20px;">14 Hour Course- with car for test.</td>
-                        </tr>
-                    </table> <br />
-
-                    <h3><b>Prerequisite:</b></h3>
-                    <p>Must have a valid, Texas Learner’s Permit to schedule.</p>
-                    <h3><b>STUDENT Free Pick-Up and Return for the Following Cities:</b></h3>
-                    <p>Collin county- Plano, Dallas County- Irving.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src=@Url.Content("/Content/img/home/road-sign.png") class="road-img" alt="">
-                </div>
-            </div><!--row end -->
-        </div><!-- box --->
-
-    </div>
-</section><!-- car content end-->
-
-
-<section class="chooses">
-    <div class="container">
-        <h2 class="text-center">Dummy Header Text</h2>
-        <p class="chooses-paragrap" style="text-align: justify;">
-            Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text
-        </p>
-
-    </div><!-- container end -->
-
-</section><!--choses end -->
-<!-- ===========================================
-                  Programes area start
-=============================================== !---->
-
-<section class="program">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4"></div>
-        </div><!-- row end -->
-    </div><!-- container end -->
-</section><!-- progrm end -->
-<!-- ===========================================
-                 Our Programs start
-=============================================== !---->
-
-<section class="our-program">
-    <div class="container">
-        <h2 class="our-program-title">Dummy Header Text</h2>
-        <div class="owl-carousel owl-theme">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="our-client">
-                        <img src=@Url.Content("/Content/img/home/blog1.png") alt="">
-                        <h6>Dummy Text</h6>
-                        <span class="btn">More Info</span>
-                    </div>
-                </div><!-- col-md- 4 end-->
-                <div class="col-md-4">
-                    <div class="our-client">
-                        <img src=@Url.Content("/Content/img/home/blog1.png") alt="">
-                        <h6>Dummy Text</h6>
-                        <span class="btn">More Info</span>
-                    </div>
-                </div><!-- col-md- 4 end-->
-                <div class="col-md-4">
-                    <div class="our-client">
-                        <img src=@Url.Content("/Content/img/home/blog1.png") alt="">
-                        <h6>Dummy Text</h6>
-                        <span class="btn">More Info</span>
-                    </div>
-                </div><!-- col-md- 4 end-->
-            </div><!-- owl carousel end -->
-
-        </div><!-- row end -->
-
-    </div><!-- container end -->
-
-</section>
-
-<!-- ===========================================
-                  Service area start
-=============================================== !---->
-
-
-<section class="service-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="icon-box">
-                        <i class="fas fa-address-book"></i>
-                    </div>
-                    <h2 class="text-center">Dummy Header Text</h2>
-                    <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-                </div>
-            </div><!-- col-md-4 end -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="icon-box">
-                        <i class="fas fa-address-book"></i>
-                    </div>
-                    <h2 class="text-center">Dummy Header Text</h2>
-                    <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-                </div>
-            </div><!-- col-md-4 end -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="icon-box">
-                        <i class="fas fa-address-book"></i>
-                    </div>
-                    <h2 class="text-center">Dummy Header Text</h2>
-                    <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-                </div>
-            </div><!-- col-md-4 end -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="icon-box">
-                        <i class="fas fa-address-book"></i>
-                    </div>
-                    <h2 class="text-center">Dummy Header Text</h2>
-                    <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-                </div>
-            </div><!-- col-md-4 end -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="icon-box">
-                        <i class="fas fa-address-book"></i>
-                    </div>
-                    <h2 class="text-center">Dummy Header Text</h2>
-                    <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-                </div>
-            </div><!-- col-md-4 end -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="icon-box">
-                        <i class="fas fa-address-book"></i>
-                    </div>
-                    <h2 class="text-center">Dummy Header Text</h2>
-                    <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-                </div>
-            </div><!-- col-md-4 end -->
-
-        </div><!--row end -->
-        <h5><em>Dummy Header Text Dummy Header Text Dummy Header Text</em></h5>
-
-        <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-
-
-    </div><!--container end -->
-
-</section><!-- service area end -->
-<!-- ===========================================
-                   Customers area start
-=============================================== !---->
-
-
-<section class="customers">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12">
-                <h2 class="customer-title">Dummy Header Text</h2>
-                <div class="owl-carousel owl-theme">
-                    <div class="test">
-                        <span class="custom-icon" style="color:#fdc400;">*****</span>
-                        <div class="test-paragrap"><p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p></div>
-                        <h3>Dummy Header Text</h3>
-                    </div>
-                    <div class="test">
-                        <span class="custom-icon" style="color:#fdc400;">*****</span>
-                        <div class="test-paragrap"><p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p></div>
-                        <h3>Dummy Header Text</h3>
-                    </div>
-                    <div class="test">
-                        <span class="custom-icon" style="color:#fdc400;">*****</span>
-
-
-                        <div class="test-paragrap"><p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p></div>
-                        <h3>Dummy Header Text</h3>
-                    </div>
-                    <div class="test">
-                        <span class="custom-icon" style="color:#fdc400;">*****</span>
-
-                        <div class="test-paragrap"><p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p></div>
-                        <h3>Dummy Header Text</h3>
-                    </div>
-                    <div class="test">
-                        <span class="custom-icon" style="color:#fdc400;">*****</span>
-
-
-                        <div class="test-paragrap"><p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p></div>
-                        <h3>Dummy Header Text</h3>
-                    </div>
-                    <div class="test">
-                        <span class="custom-icon" style="color:#fdc400;">*****</span>
-
-
-                        <!--<div class="work-image"> <img src=@Url.Content("/Content/image/my1.jpg") alt="" class="img-circle img-responsive" > </div>-->
-                        <div class="test-paragrap"><p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p></div>
-                        <h3>Dummy Header Text</h3>
-                    </div>
-                    <div class="test">
-                        <span class="custom-icon" style="color:#fdc400;">*****</span>
-
-
-                        <div class="test-paragrap"><p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p></div>
-                        <h3>Dummy Header Text</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-</section><!--- customers end ---->
-<!-- ===========================================
-                   Event area start
-=============================================== !---->
-
-<section class="event">
-    <div class="container">
-        <h2 class="event-title text-center">Dummy Header Text</h2>
-        <div class="row">
-
-            <div class="col-md-4">
-
-                <div class="card">
-                    <img src=@Url.Content("/Content/img/home/blog2.png") width="100%" class="event-img" alt="">
-                    <div class="container1">
-                        <h4>Dummy Header Text</h4>
-                        <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-                        <p class="icon"> <i class="fas fa-angle-right"></i><span class="comment">Dummy Comment</span></p>
-                    </div>
-                </div>
-            </div><!--col-md-4 end-->
-            <div class="col-md-4">
-
-                <div class="card">
-                    <img src=@Url.Content("/Content/img/home/blog2.png") width="100%" class="event-img" alt="">
-                    <div class="container1">
-                        <h4>Dummy Header Text</h4>
-                        <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-
-                        <p class="icon"> <i class="fas fa-angle-right"></i><span class="comment">Dummy Comment</span></p>
-                    </div>
-                </div>
-            </div><!--col-md-4 end-->
-            <div class="col-md-4">
-
-                <div class="card">
-                    <img src=@Url.Content("/Content/img/home/blog2.png") width="100%" class="event-img" alt="">
-                    <div class="container1">
-                        <h4>Dummy Header Text</h4>
-                        <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-
-                        <p class="icon"> <i class="fas fa-angle-right"></i><span class="comment">Dummy Comment</span></p>
-                    </div>
-                </div>
-            </div><!--col-md-4 end-->
-
-        </div><!-- row end -->
-    </div><!-- container end-->
-</section><!-- event end -->
 

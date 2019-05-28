@@ -13,6 +13,16 @@ namespace LHDS
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.LowercaseUrls = true;
+
+            routes.MapMvcAttributeRoutes();
+
+            routes.MapRoute(
+               name: "Root",
+               url: "{action}/{id}",
+               defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+           );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

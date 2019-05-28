@@ -1,226 +1,217 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>@Page.Title</title>
-    @RenderSection("head", required: false)
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Long Horn Driving School :: Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href=@Url.Content("/Content/js/assets/owl.carousel/dist/assets/owl.carousel.min.css") type="text/css" />
-    <link rel="stylesheet" href=@Url.Content("/Content/js/assets/owl.carousel/dist/assets/owl.theme.default.min.css")>
-    <link rel="stylesheet" href=@Url.Content("/Content/css/style.css?v=1.0")>
-    <link rel="shortcut icon" type="image/x-icon" href=@Url.Content("/Content/img/logo/logo.ico")>
+    <!-- Devices Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href=@Url.Content("/Content/assets/images/logo/logo.ico") />
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,100,300,500,700%7CLato:400,300,700,900&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+    <!-- Plugins CSS files -->
+    <link href=@Url.Content("/Content/assets/css/assets.css") rel="stylesheet" />
+
+    <!-- Date & Time Picker -->
+    <link href=@Url.Content("/Content/assets/css/timepicki.css") rel="stylesheet" />
+    <link href=@Url.Content("/Content/assets/css/jquery.timepicker.min.css") rel="stylesheet" />
+
+    <!-- Template CSS files -->
+    <link href=@Url.Content("/Content/themes/base/jquery-ui.css") rel="stylesheet" />
+    <link rel="stylesheet" href=@Url.Content("/Content/assets/css/style.css") />
+    <link rel="stylesheet" href=@Url.Content("/Content/assets/css/shortcodes.css") />
+    <link id="theme_css" rel="stylesheet" href=@Url.Content("/Content/assets/css/light.css") />
+    <link id="skin_css" rel="stylesheet" href=@Url.Content("/Content/assets/css/default.css") />
+    <link rel="stylesheet" href=@Url.Content("/Content/assets/css/responsive-slider.css") />
+    <style type="text/css">
+        .clients-grid > div {
+            text-align: center;
+            max-height: none;
+            min-height: 136px;
+            background-color: #fff;
+            margin: 5px;
+        }
+    </style>
 </head>
+<body>
+    <!-- site preloader start -->
+    <div class="page-loader"></div>
+    <!-- site preloader end -->
 
-    <body>
-        <div id="floatingHeader" class="floatingHeader" style="padding: 0px;">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0px;">
-                <div class="container">
-                    <a class="navbar-brand" href="#"><img src=@Url.Content("/Content/img/logo/logo.png") width="100px" alt=""></a>
-                    <div class="title">
-                        <h2 style="font-family: 'Lobster', cursive; color: #B81405;"><b>Long Horn Driving School</b></h2>
-                        <h6 style="font-family: 'Lobster', cursive; color: #033470;"> <b></b>Your Friendly, Expart Driving School</b></h6>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentFloating" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active" style=" padding-left: 140px;">
-                                <a class="nav-link" href="/home/index" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"> <b>HOME</b></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/home/about" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>ABOUT</b></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/home/driversEducation" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>DRIVERS EDUCATION</b></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/home/contact" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>CONTACT</b></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" target="_DPS" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>DPS</b></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://impacttexasdrivers.dps.texas.gov/" target="_ITD" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>ITD</b></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div><!-- container end -->
-            </nav>
+    <div class="pageWrapper">
+        <!-- Header start -->
+        <div class="top-bar gry-bg">
+            <div class="container">
+                <ul class="top-info f-left">
+                    <li><i class="fa fa-envelope main-color"></i><b class="main-color">Email:</b> <a href="mailto:info@lhdrivingschool.com">info@lhdrivingschool.com</a></li>
+                    <li><i class="fa fa-phone main-color"></i><b class="main-color">Phone: </b>972 372 4120</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- ===========================================
-                        Header area start
-    =============================================== !---->
-        <header>
-            <div class="container">
-                <div class="header-icon">
-                    <i class="fas fa-address-book"></i><span class="tx1"> Road 00, House 00, Block 0, Texas </span>
-                    <i class="fas fa-phone-volume phone" style="color:white;font-size: 22px"></i><span class="tx2"> +00 00 0000000 </span>
-                    <i class="far fa-envelope"></i><span class="tx3"> info@lhdrivingschool.com</span>
-                    <i class="fas fa-clock"></i><span class="TX4"> 8:00 AM to 5:00 PM / 7 Days</span>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-linkedin"></i>
-                </div>
-            </div>
-        </header>
-
-        <!-- ===========================================
-                        Navbar area start
-    =============================================== !---->
-
-        <div id="test">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 10px; ">
+        <div>
+            <header class="top-head minimal no-border">
                 <div class="container">
-                    <a class="navbar-brand" href="#"><img src=@Url.Content("/Content/img/logo/logo.png") width="100px" alt=""></a>
-                    <div class="title">
-                        <h2 style="font-family: 'Lobster', cursive; color: #B81405;"><b>Long Horn Driving School</b></h2>
-                        <h6 style="font-family: 'Lobster', cursive; color: #033470;"> <b></b>Your Friendly, Expart Driving School</b></h6>
+                    <!-- Logo start -->
+                    <div class="logo">
+                        <a href="@Url.Content("~/")"><img alt="" src=@Url.Content("/Content/assets/images/logo/logo.png") /></a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentFloating" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active" style=" padding-left: 140px;">
-                                    <a class="nav-link" href="/home/index" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"> <b>HOME</b></a>
+                    <div class="title">
+                        <a href="@Url.Content("~/")">
+                            <h1><span style="color: #B70D03;">LONG</span> <span style="color: #003375;">HORN</span> DRIVING SCHOOL</h1>
+                            <h4 style="color: #0067CB;">Your Friendly, Expert Driving School</h4>
+                        </a>
+                    </div> <!-- Logo end -->
+
+                    <div class="responsive-nav">
+                        <!-- top navigation menu start -->
+                        <nav class="top-nav">
+                            <ul>
+                                <li class="homenav selected"><a href="@Url.Content("~/")"><span><i class="fa fa-home fa-2x"></i></span></a></li>
+                                <li><a href="contactus"><span><i class="fa fa-map-marker fa-2x"></i>Contact Us</span></a>
+                                <li>
+                                    <a href="#"><span><i class="fa fa-car fa-2x"></i>Services</span></a>
+                                    <ul>
+                                        <li><a href="services"><i class="fa fa-graduation-cap fa-2x"></i>In Car Training</a></li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/home/about" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>ABOUT</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/home/driversEducation" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>DRIVERS EDUCATION</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/home/contact" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>CONTACT</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" target="_DPS" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>DPS</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://impacttexasdrivers.dps.texas.gov/" target="_ITD" style="font-family: 'Righteous', cursive; color: #354143; font-size: 18px;"><b>ITD</b></a>
+                                <li>
+                                    <a href="#"><span><i class="fa fa-paper-plane fa-2x"></i>DPS Impact Cources</span></a>
+                                    <ul>
+                                        <li><a href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" target="DPS"><i class="fa fa-paperclip fa-2x"></i>DPS</a></li>
+                                        <li><a href="https://impacttexasdrivers.dps.texas.gov/" target="_ITD"><i class="fa fa-paperclip fa-2x"></i>ITD</a></li>
+                                    </ul>
                                 </li>
                             </ul>
-                        </div>
-                   
-
-                </div><!-- container end -->
-            </nav>
-        </div>
-
-
-      <div>
-          @RenderBody();
-      </div>
-
-
-        <!--footer starts from here-->
-        <footer class="footer">
-            <div class="container bottom_border">
-                <div class="row">
-                    <div class=" col-sm-4 col-md col-sm-4  col-12 col">
-                        <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
-                        <!--headin5_amrc-->
-                        <p class="mb10">Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-                        <p><i class="fa fa-location-arrow"></i> Road 00, House 00, Block 0, Texas </p>
-                        <p><i class="fa fa-phone"></i>  +00 00 0000000  </p>
-                        <p><i class="fa fa fa-envelope"></i> info@lhdrivingschool.com  </p>
-
-
-                    </div>
-
-
-                    <div class=" col-sm-4 col-md  col-6 col">
-                        <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-                        <!--headin5_amrc-->
-                        <p>Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text Dummy Paragraph Text</p>
-                        <!--footer_ul_amrc ends here-->
-                    </div>
-
-
-                    <div class=" col-sm-4 col-md  col-6 col">
-                        <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-                        <!--headin5_amrc-->
-                        <ul class="footer_ul_amrc">
-                            <li><a href="#">Dummy Paragraph Text</a></li>
-                            <li><a href="#">Dummy Paragraph Text</a></li>
-                            <li><a href="#">Dummy Paragraph Text</a></li>
-                            <li><a href="#">Dummy Paragraph Text</a></li>
-                            <li><a href="#">Dummy Paragraph Text</a></li>
-                            <li><a href="#">Dummy Paragraph Text</a></li>
-                        </ul>
-                        <!--footer_ul_amrc ends here-->
-                    </div>
-
-
-                    <div class=" col-sm-4 col-md  col-12 col">
-                        <h5 class="headin5_amrc col_white_amrc pt2">Information</h5>
-                        <!--headin5_amrc ends here-->
-                        <p>
-                            FAQ<br>
-                            Locations<br>
-                            Testimonials
-                        </p>
-                        <!--footer_ul2_amrc ends here-->
+                        </nav> <!-- top navigation menu end -->
                     </div>
                 </div>
-                <!-- Start Scroll To Top -->
-                <div class="backtotop_button_wrap">
-                    <div class="backtotop_button_height">
-                        <div id="toTop"><i class="fa fa-long-arrow-up"></i></div>
-                    </div>
-                </div>
-                <!-- end Scroll To Top -->
-            </div><!-- container end -->
+            </header>
 
-
-            <div class="container">
-                <ul class="foote_bottom_ul_amrc">
-                    <li><a href="/home/index">Home</a></li>
-                    <li><a href="/home/about">About Us</a></li>
-                    <li><a href="/home/driversEducation">Drivers Education</a></li>
-                    <li><a href="/home/contact">Contact</a></li>
-                    <li><a href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" target="_blank">DPS</a></li>
-                    <li><a href="https://impacttexasdrivers.dps.texas.gov/" target="_blank">ITD</a></li>
-                    
-
-                </ul>
-                <!--foote_bottom_ul_amrc ends here-->
-
-                <p class="text-center"> © Copyright <b>Long Horn Driving School</b>. All rights reserved. </p>
-
-                <ul class="social_footer_ul">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-                <!--social_footer_ul ends here-->
+            <div>
+                @RenderBody();
             </div>
 
-        </footer>
+        <div id="contact-section">
+            <div class="sm-padding pattern-line-1 main-bg">
+                <div class="container">
+                    <div class="cta_btn">
+                        <div class="f-left">
+                            <h2 class="cta_heading uppercase white">STUDENT Free Pick-Up and Return for the Following Cities:</h2>
+                            <h4 class="cta_heading white" style="letter-spacing: normal;">Collin county- Plano, Dallas County- Irving.</h4>
+                        </div>
+                        <a class="btn btn-xl btn-outlined btn-white f-right" href="ContactUs">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Footer start -->
+        <footer id="footWrapper" style="margin-top: -21px;">
 
+            <!-- footer top bar start -->
+            <!-- footer top bar start -->
+            <!-- footer widgets start -->
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="row">
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src=@Url.Content("/Content/js/assets/owl.carousel/dist/owl.carousel.min.js")></script>
-        <script src=@Url.Content("/Content/js/app.js?v=1.0")></script>
+                        <div class="col-md-3 first">
 
-    </body>
+                            <h3>Contact Us</h3>
+                            <div class="social-list half-icons">
+                                <a href="contactus"><i class="fa fa-tty ic-contact ic-colored sm-icon sm-icon"></i><span>Contact</span></a>
+                                <a href="contactus#appointment"><i class="fa fa-calendar ic-contact ic-colored sm-icon sm-icon"></i><span>Appointment</span></a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h3>Services</h3>
+                            <div class="recent-posts-footer">
+                                <ul>
+                                    <li><a href="services">In Car Training</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 last contact-widget">
+                            <h3>Locate Us</h3>
+                            <ul class="details">
+                                <li><i class="fa fa-map-marker" style="padding-top: 3px; vertical-align: top;"></i><span>Long Horn Driving School,<br> 6400 Independence Pkwy,<br> Plano, Texas 75023</span></li>
+                                <li><i class="fa fa-envelope"></i><span>Enquiries: <a href="mailto:info@lhdrivingschool.com">info@lhdrivingschool.com</a></span></li>
+
+                                <li><i class="fa fa-phone"></i><span>Phone: 972 372 4120</span></li>
+                                <li><i class="fa fa-clock-o" style="padding-top: 3px; vertical-align: top;"></i><span>Operating Hours: <br> 9:00 AM to 6:00 PM / 7 Days</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h3>Route Map</h3>
+                            <div class="recent-posts-footer">
+                                <a href="contactus#maps_lhds">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.729470837604!2d-96.75374115331392!3d33.05937455030672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c180a2261e6f7%3A0x2d02e9942e5f462f!2s6400+Independence+Pkwy%2C+Plano%2C+TX+75023%2C+USA!5e0!3m2!1sen!2sbd!4v1555298379708!5m2!1sen!2sbd" width="263" height="165" frameborder="0" style="" allowfullscreen></iframe>
+
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- footer widgets start -->
+            <!-- footer bottom bar start -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <!-- footer copyrights left cell -->
+                        <div class="copyrights">© Copyrights <a href="Index"><b class="main-color">Long Horn Driving School</b></a>. All rights reserved.</div>
+                        <div class="web-solution">Web Solution by <a href="http://www.simplexhub.com/" target="_Simplexhub"><b class="main-color">Simplexhub</b></a></div>
+                    </div>
+                </div>
+            </div> <!-- footer bottom bar end -->
+
+        </footer><!-- Footer end -->
+
+    </div>
+
+    <!-- Back to top Link -->
+    <a id="to-top" href="#"><span class="fa fa fa-angle-up"></span></a>
+
+    <!-- Load JS plugins -->
+
+    <script src=@Url.Content("/Content/assets/js/jquery-1.12.4.js")></script>
+    <script src=@Url.Content("/Content/assets/js/jquery-ui.js")></script>
+
+    <script src=@Url.Content("/Content/assets/js/jquery.timepicker.min.js")></script>
+
+    <script type="text/javascript" src=@Url.Content("/Content/assets/js/assets.js")></script>
+    <script src=@Url.Content("/Content/assets/js/responsive-slider.js")></script>
+    <script src=@Url.Content("/Content/assets/js/jquery.event.move.js")></script>
+    <!-- general script file -->
+    <script type="text/javascript" src=@Url.Content("/Content/assets/js/script.js")></script>
+
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                //dateFormat: "dd/mm/yy",
+                dateFormat: "dd MM yy",
+
+            });
+        });
+
+        $(function () {
+            $('#timepicker').timepicker({
+                timeFormat: 'hh:mm p',
+                interval: 60,
+                minTime: '10:00am',
+                maxTime: '4:00pm',
+                startTime: '9:00',
+                dynamic: false,
+                dropdown: true,
+            });
+        });
+    </script>
+</body>
 </html>
