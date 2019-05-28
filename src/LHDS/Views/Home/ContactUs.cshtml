@@ -1,0 +1,164 @@
+﻿@model LHDS.Models.ContactViewModel
+@{
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+    Page.Title = "Long Horn Driving School :: Contact Page";
+}
+<div class="pageContent">
+    <div class="p-t-3">
+        <div class="container">
+            <div>
+                <div class="heading main centered">
+                    <h3 class="uppercase lg-title"><span class="main-color">Get In </span> Touch</h3>
+                </div>
+                <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+                <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+                <!--Get In Touch Form Start-->
+                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    <div class="row form-group over-hidden">
+                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                        <div class="col-md-4">
+                            <label for="contact-name">Name <small>*</small></label>
+                            @Html.TextBoxFor(model => model.Contacts.Name, new { @class = "form-control", id = "contact-name", name = "contact-name" })
+                            @Html.ValidationMessageFor(model => model.Contacts.Name)
+                        </div>
+                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                        <div class="col-md-4">
+                            <label for="contact-email">Email <small>*</small></label>
+                            @Html.TextBoxFor(model => model.Contacts.Email, new { @class = "form-control", id = "contact-email", name = "contact-email" })
+                            @Html.ValidationMessageFor(model => model.Contacts.Email)
+                        </div>
+                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                        <div class="col-md-4">
+                            <label for="contact-phone">Phone<small>*</small></label>
+                            @Html.TextBoxFor(model => model.Contacts.Phone, new { @class = "form-control", id = "contact-phone", name = "contact-phone" })
+                            @Html.ValidationMessageFor(model => model.Contacts.Phone)
+                        </div>
+                    </div>
+                    @Html.Label("", new { @class = "col-sm-3 control-label" })
+                    <div class="form-group over-hidden">
+                        <label for="contact-message">Message <small>*</small></label>
+                        @Html.TextAreaFor(model => model.Contacts.Message, new { @class = "form-control", id = "contact-message", name = "contact-message", rows = "6", cols = "30" })
+                        @Html.ValidationMessageFor(model => model.Contacts.Message)
+                        <div id="appointment"></div>
+                    </div>
+                    <div class="tbl wid-70">
+                        <div class="form-group m-t-2">
+                            <button class="btn main-bg btn-block btn-lg btn-3d uppercase" type="submit" id="contact-submit" name="contact-submit" value="submit" style="font-size: 15px;">Send Message</button>
+                        </div>
+                    </div>
+                }
+                <!--Get In Touch Form End-->
+            </div>
+        </div>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <!--Appointment Form Start-->
+        <div class="container">
+            <div>
+                <div class="heading main centered">
+                    <h3 class="uppercase lg-title"><span class="main-color">Make An </span> Appointment</h3>
+                    <h4 style="font-size: 18px;text-align: center; line-height: 0;">Choose Your Schedule</h4>
+                </div>
+                <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+                <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+                <!--Appointment Form Start-->
+                @using (Html.BeginForm("Appointment", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    <div class="date-time-section" style="text-align: center;">
+                        <div class="row form-group over-hidden" style="display: inline-block; margin: 0% 1%;">
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+                            @Html.TextBoxFor(model => model.Appointments.DatePicker, new { id = "datepicker", name = "datepicker", placeholder = "Click & Pick Date", style = "font: 16px 'Oswald', sans-serif; text-align: center; padding: 10px 46px; border-width: thick; border-color: #0067CB; margin: 0 auto; display: table; cursor: pointer; color: #0067CB; " })
+                            @Html.ValidationMessageFor(model => model.Appointments.DatePicker)
+                        </div>
+                        <div class="row form-group over-hidden" style="display: inline-block; margin: 0% 1%;">
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+
+                            @Html.TextBoxFor(model => model.Appointments.TimePicker, new { id = "timepicker", name = "timepicker", placeholder = "Click & Pick Time", style = "font: 16px 'Oswald', sans-serif; text-align: center; padding: 10px 46px; border-width: thick; border-color: #0067CB; margin: 0 auto; display: table; cursor: pointer; color: #0067CB; " })
+                            @Html.ValidationMessageFor(model => model.Appointments.TimePicker)
+                        </div>
+                    </div>
+                    <div class="row form-group over-hidden" style="padding-top: 15px;">
+                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                        <div class="col-md-4">
+                            <label for="appointment-first-name">First Name <small>*</small></label>
+                            @Html.TextBoxFor(model => model.Appointments.FirstName, new { @class = "form-control", id = "appointment-first-name", name = "appointment-first-name" })
+                            @Html.ValidationMessageFor(model => model.Appointments.FirstName)
+                        </div>
+                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                        <div class="col-md-4">
+                            <label for="appointment-last-name">Last Name <small>*</small></label>
+                            @Html.TextBoxFor(model => model.Appointments.LastName, new { @class = "form-control", id = "appointment-last-name", name = "appointment-last-name" })
+                            @Html.ValidationMessageFor(model => model.Appointments.LastName)
+                        </div>
+                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                        <div class="col-md-4">
+                            <label for="appointment-email">Email <small>*</small></label>
+                            @Html.TextBoxFor(model => model.Appointments.Email, new { @class = "form-control", id = "appointment-email", name = "appointment-email" })
+                            @Html.ValidationMessageFor(model => model.Appointments.Email)
+                        </div>
+                    </div>
+                    <div class="row form-group over-hidden">
+                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                        <div class="col-md-4">
+                            <label for="appointment-phone">Phone<small>*</small></label>
+                            @Html.TextBoxFor(model => model.Appointments.Phone, new { @class = "form-control", id = "appointment-phone", name = "appointment-phone" })
+                            @Html.ValidationMessageFor(model => model.Appointments.Phone)
+                        </div>
+                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                        <div class="col-md-8">
+                            <label for="appointment-permit-number">Learner's Permit Number <small>*</small></label>
+                            @Html.TextBoxFor(model => model.Appointments.LearnersPermitNumber, new { @class = "form-control", id = "appointment-permit-number", name = "appointment-permit-number" })
+                            @Html.ValidationMessageFor(model => model.Appointments.LearnersPermitNumber)
+                        </div>
+                    </div>
+                    <div class="tbl wid-70">
+                        <div class="form-group m-t-2">
+                            <button class="btn main-bg btn-block btn-lg btn-3d uppercase" type="submit" id="appointment-submit" name="appointment-submit" value="submit" style="font-size: 15px;">Submit</button>
+                        </div>
+                    </div>
+                }
+            </div>
+            <!--Appointment Form End-->
+        </div>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <!----- Appointment Section End ----->
+        <!-----	Google Map Section Start ----->
+        <div id="maps_lhds">
+            <div class="heading main centered">
+                <h3 class="uppercase lg-title"><span class="main-color">Route </span> Map</h3><b class="head-sep"><u></u></b>
+            </div>
+            <div class="gmap full">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.729470837604!2d-96.75374115331392!3d33.05937455030672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c180a2261e6f7%3A0x2d02e9942e5f462f!2s6400+Independence+Pkwy%2C+Plano%2C+TX+75023%2C+USA!5e0!3m2!1sen!2sbd!4v1555298379708!5m2!1sen!2sbd" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-----	Google Map Section End ----->
+    </div>
+</div>
+<!--Jquery Toster Start-->
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<link href="~/cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        if ('@TempData["message"]' == "Sent") {
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "positionClass": "toast-top-center",
+                "onclick": null,
+                "showDuration": "1000",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            };
+           toastr.success('Thank you! We will contact you soon.');
+       }
+    });
+</script>
+<!--Jquery Toster Start-->
