@@ -1,6 +1,6 @@
-﻿a:hover,.main-color,.testimonials-bg:before, .testimonials-bg:after,.post-item:hover .post-content h4 a,.top-head.transparent .top-nav > ul > li.selected > a,.side-nav li.dl-back a,.side-nav ul li.selected > a,.tags li:hover a,
-.accordion h5.acc-head a:not(.collapsed),.icon-box.lg-icon:hover i:before,.widget_menu ul li.selected a,.TweetAuthor a,.section-bullets li.active a,.filter-by.style5 ul li.selected a span{
-	color:#26abff;
+﻿a:hover, .main-color, .testimonials-bg:before, .testimonials-bg:after, .post-item:hover .post-content h4 a, .top-head.transparent .top-nav > ul > li.selected > a, .side-nav li.dl-back a, .side-nav ul li.selected > a, .tags li:hover a,
+.accordion h5.acc-head a:not(.collapsed), .icon-box.lg-icon:hover i:before, .widget_menu ul li.selected a, .TweetAuthor a, .section-bullets li.active a, .filter-by.style5 ul li.selected a span, .social-list.half-icons span:hover {
+    color: #26abff;
 }
 .main-color-import{
 	color:#0067cb !important
