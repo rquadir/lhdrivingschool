@@ -869,9 +869,9 @@ a, .top-head .logo, .icon-box-1:before, .icon-box-1:after, .portfolio figure img
     font-weight: bold;
     color: #ffffff;
 }
-.skew-nav:before{
-	top: 2px;
-	height:43px
+.skew-nav:before {
+    top: 2px;
+    height: 43px
 }
 .skew-nav ul li a span{
 	position:relative;
