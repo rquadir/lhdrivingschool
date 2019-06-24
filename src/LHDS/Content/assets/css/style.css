@@ -865,8 +865,9 @@ a, .top-head .logo, .icon-box-1:before, .icon-box-1:after, .portfolio figure img
     margin: 0;
     line-height: 30px;
     padding: 0 10px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
+    color: #ffffff;
 }
 .skew-nav:before{
 	top: 2px;
@@ -1014,11 +1015,12 @@ a, .top-head .logo, .icon-box-1:before, .icon-box-1:after, .portfolio figure img
 	resize:none;
 	color:#fff
 }
-.footer-middle a {
-    color: #fff;
-    font-size: 15px;
+.recent-posts-footer a {
+    font-size: 17px;
     font-weight: bold;
+    color: #ffffff;
 }
+
 .foot-text-widget p {
 	margin-bottom: 0;
 }
@@ -1183,7 +1185,12 @@ footer hr{
 .details li span {
     display: table-cell;
     vertical-align: middle;
-    font-size: 14px;
+    font-size: 15px;
+}
+.details a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
 }
 /* footer tags widget */
 .tags li {
