@@ -475,8 +475,9 @@ header ul,footer ul,.top-bar ul,.lft-tools ul,.post-info ul,.recent-posts-widget
     font-weight: 200;
     margin: 0;
 }
-
-
+.pageContent2 {
+    margin-top: -21px;
+}
 
 
 
@@ -2222,6 +2223,27 @@ footer .testimonials-bg p,.testimonials-name{
     }
     .icon-box.simple, .icon-box-2, .icon-box {
         margin: 0px -53px !important;
+    }
+    .page-title h1 {
+        margin: 0;
+        font-size: 50px !important;
+    }
+
+    .page-title h3 {
+        font-size: 25px !important;
+        font-weight: 200;
+        margin: 0;
+    }
+}
+@media (max-width: 320px) {
+    .page-title h1 {
+        margin: 0;
+        font-size: 40px !important;
+    }
+    .page-title h3 {
+        font-size: 20px !important;
+        font-weight: 200;
+        margin: 0;
     }
 }
 
