@@ -3,3 +3,14 @@
 ################################################################################
 
 /src/packages
+/src/.vs/config/applicationhost.config
+/src/.vs/LHDS/config
+/src/.vs/LHDS/v15/Server/sqlite3
+/src/.vs/LHDS/v15
+/src/.vs/LHDS/v16/Server/sqlite3
+/src/.vs/LHDS/v16
+/src/LHDS/bin/roslyn
+/src/LHDS/bin
+/src/LHDS/obj/Release
+/src/LHDS/Properties/PublishProfiles
+/src/LHDS/obj/Debug
