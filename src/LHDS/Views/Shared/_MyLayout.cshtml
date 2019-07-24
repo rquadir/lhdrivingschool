@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿﻿<!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title</title>
@@ -14,6 +14,16 @@
     <link rel="shortcut icon" href=@Url.Content("/Content/assets/images/logo/logo.ico") />
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,100,300,500,700%7CLato:400,300,700,900&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144508744-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-144508744-1');
+    </script>
+    
     <!-- Plugins CSS files -->
     <link href=@Url.Content("/Content/assets/css/assets.css") rel="stylesheet" />
 
