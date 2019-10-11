@@ -1,8 +1,9 @@
-﻿﻿﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title</title>
-    
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--SEO Meta-->
     <meta name="keywords" content="long horn driving school, driving school plano, driving school texas, driving school in plano texas 75023, asian muslim driving school, bangla driving school, american driving school, safe and reliable driving school, driving school near me, ideal driving school, ideal driving school plano, ideal driving school texas, driving instructors plano, driving classes plano, learn to drive texas, driving instructors texas, driving classes texas, defensive driving texas, driving school of north texas, adults driving, all star driving school, road to success driving school, safeway driving, online drivers ed texas fee, best online drivers ed texas, asain driving school, muslim driving school, american driving School, afforadble driving school, driving school prices,  student driving school, nearest driving school, how to learn about cars, how to learn about drive, driving center near me, driving school around me, how to drive a car for beginners, driving for beginners, cost of driving lessons, driving tutorial">
@@ -14,16 +15,6 @@
     <link rel="shortcut icon" href=@Url.Content("/Content/assets/images/logo/logo.ico") />
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,100,300,500,700%7CLato:400,300,700,900&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144508744-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-144508744-1');
-    </script>
-    
     <!-- Plugins CSS files -->
     <link href=@Url.Content("/Content/assets/css/assets.css") rel="stylesheet" />
 
@@ -61,6 +52,14 @@
                     <li><i class="fa fa-envelope main-color"></i><b class="main-color">Email:</b> <a href="mailto:info@lhdrivingschool.com">info@lhdrivingschool.com</a></li>
                     <li><i class="fa fa-phone main-color"></i><b class="main-color">Phone: </b>972 372 4120</li>
                 </ul>
+                <div class="f-right social-list">
+                    <span class="lbl-txt">Follow Us on</span>
+                    <a href="https://www.facebook.com/longhorn.ds/" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook no-border"></i></a>
+                    <a href="https://twitter.com/LongHornDS" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter no-border"></i></a>
+                    <a href="https://www.instagram.com/longhorn.ds/" data-toggle="tooltip" data-placement="bottom" data-original-title="Instagram"><i class="fa fa-instagram ic-instagram no-border"></i></a>
+                    <a href="https://www.linkedin.com/company/long-horn-ds" data-toggle="tooltip" data-placement="bottom" data-original-title="LinkedIn"><i class="fa fa-linkedin ic-linkedin no-border"></i></a>
+
+                </div>
             </div>
         </div>
 
@@ -82,7 +81,8 @@
                         <!-- top navigation menu start -->
                         <nav class="top-nav">
                             <ul>
-                                <li class="homenav selected"><a href="@Url.Content("~/")"><span><i class="fa fa-home fa-2x"></i></span></a></li>
+                                <li class="homenav selected"><a href="/"><span><i class="fa fa-home fa-2x"></i></span></a></li>
+                                <li><a href="aboutus"><span><i class="fa fa-users fa-2x" aria-hidden="true"></i>About Us</span></a>
                                 <li><a href="contactus"><span><i class="fa fa-map-marker fa-2x"></i>Contact Us</span></a>
                                 <li>
                                     <a href="#"><span><i class="fa fa-car fa-2x"></i>Services</span></a>
@@ -107,19 +107,19 @@
                 @RenderBody();
             </div>
 
-        <div id="contact-section">
-            <div class="sm-padding pattern-line-1 main-bg">
-                <div class="container">
-                    <div class="cta_btn">
-                        <div class="f-left">
-                            <h2 class="cta_heading uppercase white">STUDENT Free Pick-Up and Return for the Following Cities:</h2>
-                            <h4 class="cta_heading white" style="letter-spacing: normal;">Collin county- Plano, Dallas County- Irving.</h4>
+            <div id="contact-section">
+                <div class="sm-padding pattern-line-1 main-bg">
+                    <div class="container">
+                        <div class="cta_btn">
+                            <div class="f-left">
+                                <h2 class="cta_heading uppercase white">STUDENT Free Pick-Up and Return @*for the Following Cities:*@ please contact us.</h2>
+                                @*<h4 class="cta_heading white" style="letter-spacing: normal;">Collin county- Plano, Dallas County- Irving.</h4>*@
+                            </div>
+                            <a class="btn btn-xl btn-outlined btn-white f-right" href="ContactUs">Contact Us</a>
                         </div>
-                        <a class="btn btn-xl btn-outlined btn-white f-right" href="ContactUs">Contact Us</a>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <!-- Footer start -->
         <footer id="footWrapper" style="margin-top: -21px;">
@@ -134,9 +134,17 @@
                         <div class="col-md-3 first">
 
                             <h3>Contact Us</h3>
-                            <div class="social-list half-icons">
+                            <div class="contacts social-list half-icons">
                                 <a href="contactus"><i class="fa fa-tty ic-contact ic-colored sm-icon sm-icon"></i><span>Contact</span></a>
                                 <a href="contactus#appointment"><i class="fa fa-calendar ic-contact ic-colored sm-icon sm-icon"></i><span>Appointment</span></a>
+                            </div>
+                            <div class="socials">
+                                <div class="social-list half-icons">
+                                    <a href="https://www.facebook.com/longhorn.ds/"><i class="fa fa-facebook ic-facebook ic-colored sm-icon sm-icon"></i><span></span></a>
+                                    <a href="https://twitter.com/LongHornDS"><i class="fa fa-twitter ic-twitter ic-colored sm-icon"></i><span></span></a>
+                                    <a href="https://www.instagram.com/longhorn.ds/"><i class="fa fa-instagram ic-instagram ic-colored sm-icon"></i><span></span></a>
+                                    <a href="https://www.linkedin.com/company/long-horn-ds"><i class="fa fa-linkedin ic-linkedin ic-colored sm-icon"></i><span></span></a>
+                                </div>
                             </div>
                         </div>
 
@@ -164,7 +172,7 @@
                             <h3>Route Map</h3>
                             <div class="recent-posts-footer">
                                 <a href="contactus#maps_lhds">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.729470837604!2d-96.75374115331392!3d33.05937455030672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c180a2261e6f7%3A0x2d02e9942e5f462f!2s6400+Independence+Pkwy%2C+Plano%2C+TX+75023%2C+USA!5e0!3m2!1sen!2sbd!4v1555298379708!5m2!1sen!2sbd" width="263" height="165" frameborder="0" style="" allowfullscreen></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.729470837604!2d-96.75374115331392!3d33.05937455030672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c180a2261e6f7%3A0x2d02e9942e5f462f!2s6400+Independence+Pkwy%2C+Plano%2C+TX+75023%2C+USA!5e0!3m2!1sen!2sbd!4v1555298379708!5m2!1sen!2sbd" width="263" height="206" frameborder="0" style="" allowfullscreen></iframe>
 
                                 </a>
                             </div>
@@ -219,8 +227,8 @@
                 timeFormat: 'hh:mm p',
                 interval: 60,
                 minTime: '10:00am',
-                maxTime: '4:00pm',
-                startTime: '9:00',
+                maxTime: '05:00pm',
+                startTime: '09:00',
                 dynamic: false,
                 dropdown: true,
             });
