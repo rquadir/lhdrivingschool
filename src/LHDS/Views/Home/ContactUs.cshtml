@@ -11,7 +11,7 @@
     <div class="p-t-3">
         <div class="container">
             <div>
-                <div class="heading main centered">
+                <div class="heading main centered" itemprop="headline">
                     <h3 class="uppercase lg-title"><span class="main-color">Get In </span> Touch</h3>
                 </div>
                 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
@@ -22,7 +22,7 @@
                     @Html.ValidationSummary(true)
 
                     <fieldset>
-                        <div class="row form-group over-hidden">
+                        <div class="row form-group over-hidden" itemprop="contactType">
                             @Html.Label("", new { @class = "col-sm-3 control-label" })
                             <div class="col-md-4">
                                 <label for="contact-name">Name <small>*</small></label>
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         @Html.Label("", new { @class = "col-sm-3 control-label" })
-                        <div class="form-group over-hidden">
+                        <div class="form-group over-hidden" itemprop="contactType">
                             <label for="contact-message">Message <small>*</small></label>
                             @Html.TextAreaFor(model => model.Contacts.Message, new { @class = "form-control", id = "contact-message", name = "contact-message", rows = "6", cols = "30" })
                             @Html.ValidationMessageFor(model => model.Contacts.Message)
@@ -77,7 +77,7 @@
         <!--Appointment Form Start-->
         <div class="container">
             <div>
-                <div class="heading main centered">
+                <div class="heading main centered" itemprop="headline">
                     <h3 class="uppercase lg-title"><span class="main-color">Make An </span> Appointment</h3>
                     <h4 style="font-size: 18px;text-align: center; line-height: 0;">Choose Your Schedule</h4>
                 </div>
@@ -89,7 +89,7 @@
                     @Html.ValidationSummary(true)
 
                     <fieldset>
-                        <div class="date-time-section" style="text-align: center;">
+                        <div class="date-time-section" style="text-align: center;" itemprop="contactType">
                             <div class="row form-group over-hidden" style="display: inline-block; margin: 0% 1%;">
                                 @Html.Label("", new { @class = "col-sm-3 control-label" })
                                 @Html.TextBoxFor(model => model.Appointments.DatePicker, new { id = "datepicker", name = "datepicker", placeholder = "Click & Pick Date", style = "font: 16px 'Oswald', sans-serif; text-align: center; padding: 10px 46px; border-width: thick; border-color: #0067CB; margin: 0 auto; display: table; cursor: pointer; color: #0067CB; " })
@@ -102,7 +102,7 @@
                                 @Html.ValidationMessageFor(model => model.Appointments.TimePicker)
                             </div>
                         </div>
-                        <div class="row form-group over-hidden" style="padding-top: 15px;">
+                        <div class="row form-group over-hidden" style="padding-top: 15px;" itemprop="contactType">
                             @Html.Label("", new { @class = "col-sm-3 control-label" })
                             <div class="col-md-4">
                                 <label for="appointment-first-name">First Name <small>*</small></label>
@@ -122,7 +122,7 @@
                                 @Html.ValidationMessageFor(model => model.Appointments.Email)
                             </div>
                         </div>
-                        <div class="row form-group over-hidden">
+                        <div class="row form-group over-hidden" itemprop="contactType">
                             @Html.Label("", new { @class = "col-sm-3 control-label" })
                             <div class="col-md-4">
                                 <label for="appointment-phone">Phone<small>*</small></label>
@@ -169,10 +169,10 @@
         <!----- Appointment Section End ----->
         <!-----	Google Map Section Start ----->
         <div id="maps_lhds">
-            <div class="heading main centered">
+            <div class="heading main centered" itemprop="headline">
                 <h3 class="uppercase lg-title"><span class="main-color">Route </span> Map</h3><b class="head-sep"><u></u></b>
             </div>
-            <div class="gmap full">
+            <div class="gmap full" itemprop="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.729470837604!2d-96.75374115331392!3d33.05937455030672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c180a2261e6f7%3A0x2d02e9942e5f462f!2s6400+Independence+Pkwy%2C+Plano%2C+TX+75023%2C+USA!5e0!3m2!1sen!2sbd!4v1555298379708!5m2!1sen!2sbd" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>

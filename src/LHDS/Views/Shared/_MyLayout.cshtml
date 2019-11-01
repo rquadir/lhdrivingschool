@@ -49,10 +49,10 @@
         <div class="top-bar gry-bg">
             <div class="container">
                 <ul class="top-info f-left">
-                    <li><i class="fa fa-envelope main-color"></i><b class="main-color">Email:</b> <a href="mailto:info@lhdrivingschool.com">info@lhdrivingschool.com</a></li>
-                    <li><i class="fa fa-phone main-color"></i><b class="main-color">Phone: </b>972 372 4120</li>
+                    <li itemprop="email"><i class="fa fa-envelope main-color"></i><b class="main-color">Email:</b> <a href="mailto:info@lhdrivingschool.com">info@lhdrivingschool.com</a></li>
+                    <li itemprop="telephone"><i class="fa fa-phone main-color"></i><b class="main-color">Phone: </b>972 372 4120</li>
                 </ul>
-                <div class="f-right social-list">
+                <div class="f-right social-list" itemprop="associatedMedia">
                     <span class="lbl-txt">Follow Us on</span>
                     <a href="https://www.facebook.com/longhorn.ds/" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook no-border"></i></a>
                     <a href="https://twitter.com/LongHornDS" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter no-border"></i></a>
@@ -67,13 +67,13 @@
             <header class="top-head minimal no-border">
                 <div class="container">
                     <!-- Logo start -->
-                    <div class="logo">
-                        <a href="@Url.Content("~/")"><img src=@Url.Content("/Content/assets/images/logo/logo.png") alt="This is the logo of long horn driving school" title="LHDS logo" /></a>
+                    <div class="logo" itemprop="logo" itemscope itemtype="http://schema.org/Photograph">
+                        <a href="@Url.Content("~/")" itemprop="url"><img src=@Url.Content("/Content/assets/images/logo/logo.png") alt="This is the logo of long horn driving school" title="LHDS logo" /></a>
                     </div>
-                    <div class="title">
-                        <a href="@Url.Content("~/")">
-                            <h1><span style="color: #B70D03;">LONG</span> <span style="color: #003375;">HORN</span> DRIVING SCHOOL</h1>
-                            <h4 style="color: #0067CB;">Your Friendly, Expert Driving School</h4>
+                    <div class="title" itemprop="brand" itemscope itemtype="http://schema.org/Organization">
+                        <a href="@Url.Content("~/")" itemprop="url">
+                            <h1 itemprop="name"><span style="color: #B70D03;">LONG</span> <span style="color: #003375;">HORN</span> DRIVING SCHOOL</h1>
+                            <h4 itemprop="description" style="color: #0067CB;">Your Friendly, Expert Driving School</h4>
                         </a>
                     </div> <!-- Logo end -->
 
@@ -81,20 +81,20 @@
                         <!-- top navigation menu start -->
                         <nav class="top-nav">
                             <ul>
-                                <li class="homenav selected"><a href="/"><span><i class="fa fa-home fa-2x"></i></span></a></li>
-                                <li><a href="aboutus"><span><i class="fa fa-users fa-2x" aria-hidden="true"></i>About Us</span></a>
-                                <li><a href="contactus"><span><i class="fa fa-map-marker fa-2x"></i>Contact Us</span></a>
+                                <li class="homenav selected"><a href="/" itemprop="url"><span><i class="fa fa-home fa-2x"></i></span></a></li>
+                                <li><a href="aboutus" itemprop="url"><span><i class="fa fa-users fa-2x" aria-hidden="true"></i>About Us</span></a>
+                                <li><a href="contactus" itemprop="url"><span><i class="fa fa-map-marker fa-2x"></i>Contact Us</span></a>
                                 <li>
-                                    <a href="#"><span><i class="fa fa-car fa-2x"></i>Services</span></a>
+                                    <a href="#" itemprop="url"><span><i class="fa fa-car fa-2x"></i>Services</span></a>
                                     <ul>
-                                        <li><a href="services"><i class="fa fa-graduation-cap fa-2x"></i>In Car Training</a></li>
+                                        <li><a href="services" itemprop="url"><i class="fa fa-graduation-cap fa-2x"></i>In Car Training</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#"><span><i class="fa fa-paper-plane fa-2x"></i>DPS Impact Cources</span></a>
+                                    <a href="#" itemprop="url"><span><i class="fa fa-paper-plane fa-2x"></i>DPS Impact Cources</span></a>
                                     <ul>
-                                        <li><a href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" target="DPS"><i class="fa fa-paperclip fa-2x"></i>DPS</a></li>
-                                        <li><a href="https://impacttexasdrivers.dps.texas.gov/" target="_ITD"><i class="fa fa-paperclip fa-2x"></i>ITD</a></li>
+                                        <li><a href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" itemprop="url" target="DPS"><i class="fa fa-paperclip fa-2x"></i>DPS</a></li>
+                                        <li><a href="https://impacttexasdrivers.dps.texas.gov/" itemprop="url" target="_ITD"><i class="fa fa-paperclip fa-2x"></i>ITD</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -111,11 +111,11 @@
                 <div class="sm-padding pattern-line-1 main-bg">
                     <div class="container">
                         <div class="cta_btn">
-                            <div class="f-left">
+                            <div class="f-left" itemprop="text" itemscope itemtype="http://schema.org/Offer">
                                 <h2 class="cta_heading uppercase white">STUDENT Free Pick-Up and Return @*for the Following Cities:*@ please contact us.</h2>
                                 @*<h4 class="cta_heading white" style="letter-spacing: normal;">Collin county- Plano, Dallas County- Irving.</h4>*@
                             </div>
-                            <a class="btn btn-xl btn-outlined btn-white f-right" href="contactus">Contact Us</a>
+                            <a class="btn btn-xl btn-outlined btn-white f-right" href="contactus" itemprop="url">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -135,11 +135,11 @@
 
                             <h3>Contact Us</h3>
                             <div class="contacts social-list half-icons">
-                                <a href="contactus"><i class="fa fa-tty ic-contact ic-colored sm-icon sm-icon"></i><span>Contact</span></a>
-                                <a href="contactus#appointment"><i class="fa fa-calendar ic-contact ic-colored sm-icon sm-icon"></i><span>Appointment</span></a>
+                                <a href="contactus" itemprop="url"><i class="fa fa-tty ic-contact ic-colored sm-icon sm-icon"></i><span>Contact</span></a>
+                                <a href="contactus#appointment" itemprop="url"><i class="fa fa-calendar ic-contact ic-colored sm-icon sm-icon"></i><span>Appointment</span></a>
                             </div>
                             <div class="socials">
-                                <div class="social-list half-icons">
+                                <div class="social-list half-icons" itemprop="associatedMedia">
                                     <a href="https://www.facebook.com/longhorn.ds/"><i class="fa fa-facebook ic-facebook ic-colored sm-icon sm-icon"></i><span></span></a>
                                     <a href="https://twitter.com/LongHornDS"><i class="fa fa-twitter ic-twitter ic-colored sm-icon"></i><span></span></a>
                                     <a href="https://www.instagram.com/longhorn.ds/"><i class="fa fa-instagram ic-instagram ic-colored sm-icon"></i><span></span></a>
@@ -152,7 +152,7 @@
                             <h3>Services</h3>
                             <div class="recent-posts-footer">
                                 <ul>
-                                    <li><a href="services">In Car Training</a></li>
+                                    <li><a href="services" itemprop="url">In Car Training</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -160,17 +160,17 @@
                         <div class="col-md-3 last contact-widget">
                             <h3>Locate Us</h3>
                             <ul class="details">
-                                <li><i class="fa fa-map-marker" style="padding-top: 3px; vertical-align: top;"></i><span>Long Horn Driving School,<br> 6400 Independence Pkwy,<br> Plano, Texas 75023</span></li>
-                                <li><i class="fa fa-envelope"></i><span>Enquiries: <a href="mailto:info@lhdrivingschool.com">info@lhdrivingschool.com</a></span></li>
+                                <li><i class="fa fa-map-marker" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="address">Long Horn Driving School,<br> 6400 Independence Pkwy,<br> Plano, Texas 75023</span></li>
+                                <li><i class="fa fa-envelope"></i><span itemprop="email">Enquiries: <a href="mailto:info@lhdrivingschool.com">info@lhdrivingschool.com</a></span></li>
 
-                                <li><i class="fa fa-phone"></i><span>Phone: 972 372 4120</span></li>
-                                <li><i class="fa fa-clock-o" style="padding-top: 3px; vertical-align: top;"></i><span>Operating Hours: <br> 9:00 AM to 6:00 PM / 7 Days</span></li>
+                                <li><i class="fa fa-phone"></i><span itemprop="telephone">Phone: 972 372 4120</span></li>
+                                <li><i class="fa fa-clock-o" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="openingHours" content="09:00-18:00 Su, Mo, Tu, We, Th, Fr, Sa">Operating Hours: <br> 9:00 AM to 6:00 PM / 7 Days</span></li>
                             </ul>
                         </div>
 
                         <div class="col-md-3">
                             <h3>Route Map</h3>
-                            <div class="recent-posts-footer">
+                            <div class="recent-posts-footer" itemprop="map">
                                 <a href="contactus#maps_lhds">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.729470837604!2d-96.75374115331392!3d33.05937455030672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c180a2261e6f7%3A0x2d02e9942e5f462f!2s6400+Independence+Pkwy%2C+Plano%2C+TX+75023%2C+USA!5e0!3m2!1sen!2sbd!4v1555298379708!5m2!1sen!2sbd" width="263" height="206" frameborder="0" style="" allowfullscreen></iframe>
 
@@ -187,8 +187,8 @@
                 <div class="container">
                     <div class="row">
                         <!-- footer copyrights left cell -->
-                        <div class="copyrights">© Copyrights <a href="/"><b class="main-color">Long Horn Driving School</b></a>. All rights reserved.</div>
-                        <div class="web-solution">Web Solution by <a href="http://www.simplexhub.com/" target="_Simplexhub"><b class="main-color">Simplexhub</b></a></div>
+                        <div class="copyrights" itemprop="name">© Copyrights <a href="/"><b class="main-color" itemprop="name">Long Horn Driving School</b></a>. All rights reserved.</div>
+                        <div class="web-solution">Web Solution by <a href="http://www.simplexhub.com/" itemprop="author" target="_Simplexhub"><b class="main-color">Simplexhub</b></a></div>
                     </div>
                 </div>
             </div> <!-- footer bottom bar end -->
