@@ -31,6 +31,8 @@ namespace LHDS.Models
         [StringLength(50, ErrorMessage = "Please enter a valid permit number")]
         public string LearnersPermitNumber { get; set; }
 
+        public string GoogleCaptchaToken { get; set; }
+
         public bool SuccessfullySent { get; set; }
 
         public string Result { get; set; }

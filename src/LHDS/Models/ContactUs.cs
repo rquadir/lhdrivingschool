@@ -26,7 +26,9 @@ namespace LHDS.Models
         [Required]
         [StringLength(1000, MinimumLength = 4, ErrorMessage = "Please enter your message.")]
         public string Message { get; set; }
-       
+
+        public string GoogleCaptchaToken { get; set; }
+
         public bool SuccessfullySent { get; set; }
 
         public string Result { get; set; }

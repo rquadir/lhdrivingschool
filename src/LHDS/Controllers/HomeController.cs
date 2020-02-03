@@ -9,6 +9,8 @@ using LHDS.Models;
 using Newtonsoft.Json;
 using System.Configuration;
 using CaptchaMvc.HtmlHelpers;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace LHDS.Controllers
 {
@@ -24,30 +26,42 @@ namespace LHDS.Controllers
             return View();
         }
 
+        public class CaptchaResponseViewModel
+        {
+            public bool Success { get; set; }
+
+            [JsonProperty(PropertyName = "error-codes")]
+            public IEnumerable<string> ErrorCodes { get; set; }
+
+            [JsonProperty(PropertyName = "challenge_ts")]
+            public DateTime ChallengeTime { get; set; }
+
+            public string HostName { get; set; }
+            public double Score { get; set; }
+            public string Action { get; set; }
+        }
+
         // GET: Home
         //[Route("ContactUs")]
-
         public ActionResult ContactUs()
         {
-            //ContactViewModel model = new ContactViewModel();
-            //model.Contacts = new ContactUs();
-            //model.Appointments = new Appointment();
-
-
-            return View();
+             return View();
         }
 
         [HttpPost]
-        public ActionResult ContactUs(ContactViewModel model)
+        public async Task<ActionResult> ContactUs(ContactViewModel model)
         {
             if (ModelState.IsValid)
             {
-                //if (!this.IsCaptchaValid(""))
-                //{
-                //    ViewBag.ErrorMessage1 = "Please validate the captcha.";
-                //    return View();
-                //}
-                //else { }
+                var isCaptchaValid = await IsCaptchaValid1(model.Contacts.GoogleCaptchaToken);
+                if (isCaptchaValid)
+                {
+                    return RedirectToAction("ContactUs");
+                }
+                else
+                {
+                    ModelState.AddModelError("GoogleCaptcha", "The captcha is not valid");
+                }
 
                 ViewBag.Message = "Your mail sent.";
 
@@ -92,21 +106,50 @@ namespace LHDS.Controllers
             return View("ContactUs", model);
         }
 
-        //[CaptchaMvc.Attributes.CaptchaVerify("Please validate the captcha.")]
+        private async Task<bool> IsCaptchaValid1(string response)
+        {
+            try
+            {
+                var secret = "6LdJedQUAAAAAFTuWB40c8QCs077zm027BEk9oYx";
+                using (var client = new HttpClient())
+                {
+                    var values = new Dictionary<string, string>
+                    {
+                        {"secret", secret},
+                        {"response", response},
+                        {"remoteip", Request.UserHostAddress}
+                    };
+
+                    var content = new FormUrlEncodedContent(values);
+                    var verify = await client.PostAsync("https://www.google.com/recaptcha/api/siteverify", content);
+                    var captchaResponseJson = await verify.Content.ReadAsStringAsync();
+                    var captchaResult = JsonConvert.DeserializeObject<CaptchaResponseViewModel>(captchaResponseJson);
+                    return captchaResult.Success
+                           && captchaResult.Action == "contact"
+                           && captchaResult.Score > 0.5;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+        
         [HttpPost]
-        public ActionResult Appointment(ContactViewModel model)
+        public async Task<ActionResult> Appointment(ContactViewModel model)
         {
             if (ModelState.IsValid)
             {
-                //if (!ModelState.IsValid)
-                //{
-                //    ViewBag.ErrorMessage2 = "Please validate the captcha.";
-                //    //TempData["ErrorMessage2"] = "Please validate the captcha.";
-                //    //ViewBag.data = TempData["ErrorMessage2"].ToString();
-                //    //TempData["ErrorMessage2"] = string.Format("Please validate the captcha.");
-                //    return View();
-                //}
-                //else { }
+                var isCaptchaValid = await IsCaptchaValid2(model.Appointments.GoogleCaptchaToken);
+                if (isCaptchaValid)
+                {
+                    return RedirectToAction("ContactUs");
+                }
+                else
+                {
+                    ModelState.AddModelError("GoogleCaptcha", "The captcha is not valid");
+                }
 
                 ViewBag.Message = "Your Email Sent.";
 
@@ -155,6 +198,36 @@ namespace LHDS.Controllers
                 ModelState.Clear();
             }
             return View("ContactUs", model);
+        }
+
+        private async Task<bool> IsCaptchaValid2(string response)
+        {
+            try
+            {
+                var secret = "6LcYjNQUAAAAAO1mPypwAlAF-rwoCFXLnveoMrlZ";
+                using (var client = new HttpClient())
+                {
+                    var values = new Dictionary<string, string>
+                    {
+                        {"secret", secret},
+                        {"response", response},
+                        {"remoteip", Request.UserHostAddress}
+                    };
+
+                    var content = new FormUrlEncodedContent(values);
+                    var verify = await client.PostAsync("https://www.google.com/recaptcha/api/siteverify", content);
+                    var captchaResponseJson = await verify.Content.ReadAsStringAsync();
+                    var captchaResult = JsonConvert.DeserializeObject<CaptchaResponseViewModel>(captchaResponseJson);
+                    return captchaResult.Success
+                           && captchaResult.Action == "appointment"
+                           && captchaResult.Score > 0.5;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
         }
 
         // GET: Home
