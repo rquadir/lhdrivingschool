@@ -18,56 +18,56 @@
                 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
                 <!--Get In Touch Form Start-->
 
-                <script src="https://www.google.com/recaptcha/api.js?render=6LdJedQUAAAAAEBiBIEa2FRJOJmmqZj4xjQ2edoC"></script>
+                @*<script src="https://www.google.com/recaptcha/api.js?render=6LdJedQUAAAAAEBiBIEa2FRJOJmmqZj4xjQ2edoC"></script>
                 <script>
                     grecaptcha.ready(function () {
                         grecaptcha.execute('6LdJedQUAAAAAEBiBIEa2FRJOJmmqZj4xjQ2edoC', { action: 'contact' }).then(function (token) {
                             $("#GoogleCaptchaToken").val(token);
+                        });
                     });
-});
-                </script>
+                </script>*@
 
                 @using (Html.BeginForm("ContactUs", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
                 {
                     @Html.ValidationSummary(true)
 
-            <fieldset>
-                <div class="row form-group over-hidden" itemprop="contactType">
-                    @Html.Label("", new { @class = "col-sm-3 control-label" })
-                    <div class="col-md-4">
-                        <label for="contact-name">Name <small>*</small></label>
-                        @Html.TextBoxFor(model => model.Contacts.Name, new { @class = "form-control", id = "contact-name", name = "contact-name" })
-                        @Html.ValidationMessageFor(model => model.Contacts.Name)
-                    </div>
-                    @Html.Label("", new { @class = "col-sm-3 control-label" })
-                    <div class="col-md-4">
-                        <label for="contact-email">Email <small>*</small></label>
-                        @Html.TextBoxFor(model => model.Contacts.Email, new { @class = "form-control", id = "contact-email", name = "contact-email" })
-                        @Html.ValidationMessageFor(model => model.Contacts.Email)
-                    </div>
-                    @Html.Label("", new { @class = "col-sm-3 control-label" })
-                    <div class="col-md-4">
-                        <label for="contact-phone">Phone<small>*</small></label>
-                        @Html.TextBoxFor(model => model.Contacts.Phone, new { @class = "form-control", id = "contact-phone", name = "contact-phone" })
-                        @Html.ValidationMessageFor(model => model.Contacts.Phone)
-                    </div>
-                </div>
-                @Html.Label("", new { @class = "col-sm-3 control-label" })
-                <div class="form-group over-hidden" itemprop="contactType">
-                    <label for="contact-message">Message <small>*</small></label>
-                    @Html.TextAreaFor(model => model.Contacts.Message, new { @class = "form-control", id = "contact-message", name = "contact-message", rows = "6", cols = "30" })
-                    @Html.ValidationMessageFor(model => model.Contacts.Message)
-                    <div id="appointment"></div>
-                </div>
+                    <fieldset>
+                        <div class="row form-group over-hidden" itemprop="contactType">
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+                            <div class="col-md-4">
+                                <label for="contact-name">Name <small>*</small></label>
+                                @Html.TextBoxFor(model => model.Contacts.Name, new { @class = "form-control", id = "contact-name", name = "contact-name" })
+                                @Html.ValidationMessageFor(model => model.Contacts.Name)
+                            </div>
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+                            <div class="col-md-4">
+                                <label for="contact-email">Email <small>*</small></label>
+                                @Html.TextBoxFor(model => model.Contacts.Email, new { @class = "form-control", id = "contact-email", name = "contact-email" })
+                                @Html.ValidationMessageFor(model => model.Contacts.Email)
+                            </div>
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+                            <div class="col-md-4">
+                                <label for="contact-phone">Phone<small>*</small></label>
+                                @Html.TextBoxFor(model => model.Contacts.Phone, new { @class = "form-control", id = "contact-phone", name = "contact-phone" })
+                                @Html.ValidationMessageFor(model => model.Contacts.Phone)
+                            </div>
+                        </div>
+                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                        <div class="form-group over-hidden" itemprop="contactType">
+                            <label for="contact-message">Message <small>*</small></label>
+                            @Html.TextAreaFor(model => model.Contacts.Message, new { @class = "form-control", id = "contact-message", name = "contact-message", rows = "6", cols = "30" })
+                            @Html.ValidationMessageFor(model => model.Contacts.Message)
+                            <div id="appointment"></div>
+                        </div>
 
-                @Html.HiddenFor(model => model.Contacts.GoogleCaptchaToken)
+                        @*@Html.HiddenFor(model => model.Contacts.GoogleCaptchaToken)*@
 
-                <div class="tbl wid-70">
-                    <div class="form-group m-t-2">
-                        <button class="btn main-bg btn-block btn-lg btn-3d uppercase" type="submit" id="contact-submit" name="contact-submit" value="submit" style="font-size: 15px;">Send Message</button>
-                    </div>
-                </div>
-            </fieldset>
+                        <div class="tbl wid-70">
+                            <div class="form-group m-t-2">
+                                <button class="btn main-bg btn-block btn-lg btn-3d uppercase" type="submit" id="contact-submit" name="contact-submit" value="submit" style="font-size: 15px;">Send Message</button>
+                            </div>
+                        </div>
+                    </fieldset>
                 }
 
                 <!--Get In Touch Form End-->
@@ -86,14 +86,14 @@
                 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
                 <!--Appointment Form Start-->
 
-                <script src="https://www.google.com/recaptcha/api.js?render=6LcYjNQUAAAAANdarlZOeueBkxtj6sqk-Woq6uXC"></script>
+                @*<script src="https://www.google.com/recaptcha/api.js?render=6LcYjNQUAAAAANdarlZOeueBkxtj6sqk-Woq6uXC"></script>
                 <script>
                     grecaptcha.ready(function () {
                         grecaptcha.execute('6LcYjNQUAAAAANdarlZOeueBkxtj6sqk-Woq6uXC', { action: 'appointment' }).then(function (token) {
                             $("#GoogleCaptchaToken").val(token);
                         });
                     });
-                </script>
+                </script>*@
 
                 @using (Html.BeginForm("Appointment", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
                 {
@@ -148,7 +148,7 @@
                     </div>
                 </div>
 
-                @Html.HiddenFor(model => model.Appointments.GoogleCaptchaToken)
+                @*@Html.HiddenFor(model => model.Appointments.GoogleCaptchaToken)*@
 
                 <div class="tbl wid-70">
                     <div class="form-group m-t-2">
