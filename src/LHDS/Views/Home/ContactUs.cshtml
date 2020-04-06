@@ -18,14 +18,14 @@
                 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
                 <!--Get In Touch Form Start-->
 
-                @*<script src="https://www.google.com/recaptcha/api.js?render=6LdJedQUAAAAAEBiBIEa2FRJOJmmqZj4xjQ2edoC"></script>
+                <script src="https://www.google.com/recaptcha/api.js?render=6LeyHecUAAAAALULvwgSQs0NSHUm_kw82No1v3N8"></script>
                 <script>
                     grecaptcha.ready(function () {
-                        grecaptcha.execute('6LdJedQUAAAAAEBiBIEa2FRJOJmmqZj4xjQ2edoC', { action: 'contact' }).then(function (token) {
+                        grecaptcha.execute('6LeyHecUAAAAALULvwgSQs0NSHUm_kw82No1v3N8', { action: 'contact' }).then(function (token) {
                             $("#GoogleCaptchaToken").val(token);
                         });
                     });
-                </script>*@
+                </script>
 
                 @using (Html.BeginForm("ContactUs", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
                 {
@@ -60,7 +60,7 @@
                             <div id="appointment"></div>
                         </div>
 
-                        @*@Html.HiddenFor(model => model.Contacts.GoogleCaptchaToken)*@
+                        @Html.HiddenFor(model => model.Contacts.GoogleCaptchaToken)
 
                         <div class="tbl wid-70">
                             <div class="form-group m-t-2">
@@ -86,14 +86,14 @@
                 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
                 <!--Appointment Form Start-->
 
-                @*<script src="https://www.google.com/recaptcha/api.js?render=6LcYjNQUAAAAANdarlZOeueBkxtj6sqk-Woq6uXC"></script>
+                <script src="https://www.google.com/recaptcha/api.js?render=6LfbHecUAAAAAOrDw29N_q2QWPC4cI-1xaJXxMMo"></script>
                 <script>
                     grecaptcha.ready(function () {
-                        grecaptcha.execute('6LcYjNQUAAAAANdarlZOeueBkxtj6sqk-Woq6uXC', { action: 'appointment' }).then(function (token) {
+                        grecaptcha.execute('6LfbHecUAAAAAOrDw29N_q2QWPC4cI-1xaJXxMMo', { action: 'appointment' }).then(function (token) {
                             $("#GoogleCaptchaToken").val(token);
                         });
                     });
-                </script>*@
+                </script>
 
                 @using (Html.BeginForm("Appointment", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
                 {
@@ -148,7 +148,7 @@
                     </div>
                 </div>
 
-                @*@Html.HiddenFor(model => model.Appointments.GoogleCaptchaToken)*@
+                @Html.HiddenFor(model => model.Appointments.GoogleCaptchaToken)
 
                 <div class="tbl wid-70">
                     <div class="form-group m-t-2">
