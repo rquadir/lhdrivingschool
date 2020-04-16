@@ -1,5 +1,4 @@
 ﻿@model LHDS.Models.ContactViewModel
-@using CaptchaMvc.HtmlHelpers
 @{
     Layout = "~/Views/Shared/_MyLayout.cshtml";
     ViewBag.Title1 = "Long Horn Driving School";
@@ -21,15 +20,15 @@
                 <script src="https://www.google.com/recaptcha/api.js?render=6LeyHecUAAAAALULvwgSQs0NSHUm_kw82No1v3N8"></script>
                 <script>
                     grecaptcha.ready(function () {
-                        grecaptcha.execute('6LeyHecUAAAAALULvwgSQs0NSHUm_kw82No1v3N8', { action: 'contact' }).then(function (token) {
-                            $("#GoogleCaptchaToken").val(token);
+                        grecaptcha.execute('6LeyHecUAAAAALULvwgSQs0NSHUm_kw82No1v3N8', { action: 'contact_us' }).then(function (token) {
+                            $("#GoogleCaptchaTokenForContact").val(token);
                         });
                     });
                 </script>
 
                 @using (Html.BeginForm("ContactUs", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
                 {
-                    @Html.ValidationSummary(true)
+                    @Html.ValidationSummary()
 
                     <fieldset>
                         <div class="row form-group over-hidden" itemprop="contactType">
@@ -60,7 +59,7 @@
                             <div id="appointment"></div>
                         </div>
 
-                        @Html.HiddenFor(model => model.Contacts.GoogleCaptchaToken)
+                        @Html.HiddenFor(model => model.GoogleCaptchaTokenForContact)
 
                         <div class="tbl wid-70">
                             <div class="form-group m-t-2">
@@ -90,72 +89,72 @@
                 <script>
                     grecaptcha.ready(function () {
                         grecaptcha.execute('6LfbHecUAAAAAOrDw29N_q2QWPC4cI-1xaJXxMMo', { action: 'appointment' }).then(function (token) {
-                            $("#GoogleCaptchaToken").val(token);
+                            $("#GoogleCaptchaTokenForAppointment").val(token);
                         });
                     });
                 </script>
 
                 @using (Html.BeginForm("Appointment", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
                 {
-                    @Html.ValidationSummary(true)
+                    @Html.ValidationSummary()
 
-            <fieldset>
-                <div class="date-time-section" style="text-align: center;" itemprop="contactType">
-                    <div class="row form-group over-hidden" style="display: inline-block; margin: 0% 1%;">
-                        @Html.Label("", new { @class = "col-sm-3 control-label" })
-                        @Html.TextBoxFor(model => model.Appointments.DatePicker, new { id = "datepicker", name = "datepicker", placeholder = "Click & Pick Date", style = "font: 16px 'Oswald', sans-serif; text-align: center; padding: 10px 46px; border-width: thick; border-color: #0067CB; margin: 0 auto; display: table; cursor: pointer; color: #0067CB; " })
-                        @Html.ValidationMessageFor(model => model.Appointments.DatePicker)
-                    </div>
-                    <div class="row form-group over-hidden" style="display: inline-block; margin: 0% 1%;">
-                        @Html.Label("", new { @class = "col-sm-3 control-label" })
+                    <fieldset>
+                        <div class="date-time-section" style="text-align: center;" itemprop="contactType">
+                            <div class="row form-group over-hidden" style="display: inline-block; margin: 0% 1%;">
+                                @Html.Label("", new { @class = "col-sm-3 control-label" })
+                                @Html.TextBoxFor(model => model.Appointments.DatePicker, new { id = "datepicker", name = "datepicker", placeholder = "Click & Pick Date", style = "font: 16px 'Oswald', sans-serif; text-align: center; padding: 10px 46px; border-width: thick; border-color: #0067CB; margin: 0 auto; display: table; cursor: pointer; color: #0067CB; " })
+                                @Html.ValidationMessageFor(model => model.Appointments.DatePicker)
+                            </div>
+                            <div class="row form-group over-hidden" style="display: inline-block; margin: 0% 1%;">
+                                @Html.Label("", new { @class = "col-sm-3 control-label" })
 
-                        @Html.TextBoxFor(model => model.Appointments.TimePicker, new { id = "timepicker", name = "timepicker", placeholder = "Click & Pick Time", style = "font: 16px 'Oswald', sans-serif; text-align: center; padding: 10px 46px; border-width: thick; border-color: #0067CB; margin: 0 auto; display: table; cursor: pointer; color: #0067CB; " })
-                        @Html.ValidationMessageFor(model => model.Appointments.TimePicker)
-                    </div>
-                </div>
-                <div class="row form-group over-hidden" style="padding-top: 15px;" itemprop="contactType">
-                    @Html.Label("", new { @class = "col-sm-3 control-label" })
-                    <div class="col-md-4">
-                        <label for="appointment-first-name">First Name <small>*</small></label>
-                        @Html.TextBoxFor(model => model.Appointments.FirstName, new { @class = "form-control", id = "appointment-first-name", name = "appointment-first-name" })
-                        @Html.ValidationMessageFor(model => model.Appointments.FirstName)
-                    </div>
-                    @Html.Label("", new { @class = "col-sm-3 control-label" })
-                    <div class="col-md-4">
-                        <label for="appointment-last-name">Last Name <small>*</small></label>
-                        @Html.TextBoxFor(model => model.Appointments.LastName, new { @class = "form-control", id = "appointment-last-name", name = "appointment-last-name" })
-                        @Html.ValidationMessageFor(model => model.Appointments.LastName)
-                    </div>
-                    @Html.Label("", new { @class = "col-sm-3 control-label" })
-                    <div class="col-md-4">
-                        <label for="appointment-email">Email <small>*</small></label>
-                        @Html.TextBoxFor(model => model.Appointments.Email, new { @class = "form-control", id = "appointment-email", name = "appointment-email" })
-                        @Html.ValidationMessageFor(model => model.Appointments.Email)
-                    </div>
-                </div>
-                <div class="row form-group over-hidden" itemprop="contactType">
-                    @Html.Label("", new { @class = "col-sm-3 control-label" })
-                    <div class="col-md-4">
-                        <label for="appointment-phone">Phone<small>*</small></label>
-                        @Html.TextBoxFor(model => model.Appointments.Phone, new { @class = "form-control", id = "appointment-phone", name = "appointment-phone" })
-                        @Html.ValidationMessageFor(model => model.Appointments.Phone)
-                    </div>
-                    @Html.Label("", new { @class = "col-sm-3 control-label" })
-                    <div class="col-md-8">
-                        <label for="appointment-permit-number">Learner's Permit Number <small>*</small></label>
-                        @Html.TextBoxFor(model => model.Appointments.LearnersPermitNumber, new { @class = "form-control", id = "appointment-permit-number", name = "appointment-permit-number" })
-                        @Html.ValidationMessageFor(model => model.Appointments.LearnersPermitNumber)
-                    </div>
-                </div>
+                                @Html.TextBoxFor(model => model.Appointments.TimePicker, new { id = "timepicker", name = "timepicker", placeholder = "Click & Pick Time", style = "font: 16px 'Oswald', sans-serif; text-align: center; padding: 10px 46px; border-width: thick; border-color: #0067CB; margin: 0 auto; display: table; cursor: pointer; color: #0067CB; " })
+                                @Html.ValidationMessageFor(model => model.Appointments.TimePicker)
+                            </div>
+                        </div>
+                        <div class="row form-group over-hidden" style="padding-top: 15px;" itemprop="contactType">
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+                            <div class="col-md-4">
+                                <label for="appointment-first-name">First Name <small>*</small></label>
+                                @Html.TextBoxFor(model => model.Appointments.FirstName, new { @class = "form-control", id = "appointment-first-name", name = "appointment-first-name" })
+                                @Html.ValidationMessageFor(model => model.Appointments.FirstName)
+                            </div>
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+                            <div class="col-md-4">
+                                <label for="appointment-last-name">Last Name <small>*</small></label>
+                                @Html.TextBoxFor(model => model.Appointments.LastName, new { @class = "form-control", id = "appointment-last-name", name = "appointment-last-name" })
+                                @Html.ValidationMessageFor(model => model.Appointments.LastName)
+                            </div>
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+                            <div class="col-md-4">
+                                <label for="appointment-email">Email <small>*</small></label>
+                                @Html.TextBoxFor(model => model.Appointments.Email, new { @class = "form-control", id = "appointment-email", name = "appointment-email" })
+                                @Html.ValidationMessageFor(model => model.Appointments.Email)
+                            </div>
+                        </div>
+                        <div class="row form-group over-hidden" itemprop="contactType">
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+                            <div class="col-md-4">
+                                <label for="appointment-phone">Phone<small>*</small></label>
+                                @Html.TextBoxFor(model => model.Appointments.Phone, new { @class = "form-control", id = "appointment-phone", name = "appointment-phone" })
+                                @Html.ValidationMessageFor(model => model.Appointments.Phone)
+                            </div>
+                            @Html.Label("", new { @class = "col-sm-3 control-label" })
+                            <div class="col-md-8">
+                                <label for="appointment-permit-number">Learner's Permit Number <small>*</small></label>
+                                @Html.TextBoxFor(model => model.Appointments.LearnersPermitNumber, new { @class = "form-control", id = "appointment-permit-number", name = "appointment-permit-number" })
+                                @Html.ValidationMessageFor(model => model.Appointments.LearnersPermitNumber)
+                            </div>
+                        </div>
 
-                @Html.HiddenFor(model => model.Appointments.GoogleCaptchaToken)
+                        @Html.HiddenFor(model => model.GoogleCaptchaTokenForAppointment)
 
-                <div class="tbl wid-70">
-                    <div class="form-group m-t-2">
-                        <button class="btn main-bg btn-block btn-lg btn-3d uppercase" type="submit" id="appointment-submit" name="appointment-submit" value="submit" style="font-size: 15px;">Submit</button>
-                    </div>
-                </div>
-            </fieldset>
+                        <div class="tbl wid-70">
+                            <div class="form-group m-t-2">
+                                <button class="btn main-bg btn-block btn-lg btn-3d uppercase" type="submit" id="appointment-submit" name="appointment-submit" value="submit" style="font-size: 15px;">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
                 }
             </div>
             <!--Appointment Form End-->

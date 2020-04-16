@@ -11,5 +11,9 @@ namespace LHDS.Models
         public ContactUs Contacts { get; set; }
 
         public Appointment Appointments { get; set; }
+
+        public string GoogleCaptchaTokenForContact { get; set; }
+
+        public string GoogleCaptchaTokenForAppointment { get; set; }
     }
 }
