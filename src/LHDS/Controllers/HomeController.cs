@@ -119,7 +119,7 @@ namespace LHDS.Controllers
         {
             try
             {
-                var secretForContact = "6LeyHecUAAAAAN1i7W82JtEMJ6IS0h3bdoInlUMc";
+                var secretForContact = ConfigurationManager.AppSettings["ContactSecretKey"];
                 using (var clientForContact = new HttpClient())
                 {
                     var valuesForContact = new Dictionary<string, string>
@@ -208,7 +208,7 @@ namespace LHDS.Controllers
         {
             try
             {
-                var secretForAppointment = "6LfbHecUAAAAACoDdtC8RXpY2rrpvQVo17CYk-kl";
+                var secretForAppointment = ConfigurationManager.AppSettings["AppointmentSecretKey"];
                 using (var clientForAppointment = new HttpClient())
                 {
                     var valuesForAppointment = new Dictionary<string, string>

@@ -16,11 +16,10 @@
                 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
                 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
                 <!--Get In Touch Form Start-->
-
-                <script src="https://www.google.com/recaptcha/api.js?render=6LeyHecUAAAAALULvwgSQs0NSHUm_kw82No1v3N8"></script>
+                <script src="https://www.google.com/recaptcha/api.js?render=@System.Configuration.ConfigurationManager.AppSettings["ContactSiteKey"]"></script>
                 <script>
                     grecaptcha.ready(function () {
-                        grecaptcha.execute('6LeyHecUAAAAALULvwgSQs0NSHUm_kw82No1v3N8', { action: 'contact_us' }).then(function (token) {
+                        grecaptcha.execute('@System.Configuration.ConfigurationManager.AppSettings["ContactSiteKey"]', { action: 'contact_us' }).then(function (token) {
                             $("#GoogleCaptchaTokenForContact").val(token);
                         });
                     });
@@ -84,11 +83,10 @@
                 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
                 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
                 <!--Appointment Form Start-->
-
-                <script src="https://www.google.com/recaptcha/api.js?render=6LfbHecUAAAAAOrDw29N_q2QWPC4cI-1xaJXxMMo"></script>
+                <script src="https://www.google.com/recaptcha/api.js?render=@System.Configuration.ConfigurationManager.AppSettings["AppointmentSiteKey"]"></script>
                 <script>
                     grecaptcha.ready(function () {
-                        grecaptcha.execute('6LfbHecUAAAAAOrDw29N_q2QWPC4cI-1xaJXxMMo', { action: 'appointment' }).then(function (token) {
+                        grecaptcha.execute('@System.Configuration.ConfigurationManager.AppSettings["AppointmentSiteKey"]', { action: 'appointment' }).then(function (token) {
                             $("#GoogleCaptchaTokenForAppointment").val(token);
                         });
                     });
