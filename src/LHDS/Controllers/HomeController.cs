@@ -95,6 +95,7 @@ namespace LHDS.Controllers
 
                     mail.From = new MailAddress(StaticData.EmailFrom);
                     mail.To.Add(StaticData.InfoEmailAddress);
+                    //mail.To.Add(StaticData.TestEmailAddress);
                     mail.CC.Add(StaticData.AdminEmailAddress);
                     mail.Bcc.Add(StaticData.AdminEmailAddress);
                     mail.Subject = "Contact request from Long Horn Driving School website";
@@ -189,6 +190,7 @@ namespace LHDS.Controllers
 
                     mail.From = new MailAddress(StaticData.EmailFrom);
                     mail.To.Add(StaticData.InfoEmailAddress);
+                    //mail.To.Add(StaticData.TestEmailAddress);
                     mail.CC.Add(StaticData.AdminEmailAddress);
                     mail.Bcc.Add(StaticData.AdminEmailAddress);
                     mail.Subject = "Appointment request from Long Horn Driving School website";
