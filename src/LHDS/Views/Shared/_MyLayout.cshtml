@@ -49,15 +49,15 @@
         <div class="top-bar gry-bg">
             <div class="container">
                 <ul class="top-info f-left">
-                    <li itemprop="email"><i class="fa fa-envelope main-color"></i><b class="main-color">Email:</b> <a href="mailto:info@lhdrivingschool.com">info@lhdrivingschool.com</a></li>
-                    <li itemprop="telephone"><i class="fa fa-phone main-color"></i><b class="main-color">Phone: </b>972 372 4120</li>
+                    <li itemprop="email"><i class="fa fa-envelope main-color"></i><b class="main-color">Email:</b> <a href="@System.Configuration.ConfigurationManager.AppSettings["Email"]">info@lhdrivingschool.com</a></li>
+                    <li itemprop="telephone"><i class="fa fa-phone main-color"></i><b class="main-color">Phone: </b>@System.Configuration.ConfigurationManager.AppSettings["Phone"]</li>
                 </ul>
                 <div class="f-right social-list" itemprop="associatedMedia">
                     <span class="lbl-txt">Follow Us on</span>
-                    <a href="https://www.facebook.com/longhorn.ds/" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook no-border"></i></a>
-                    <a href="https://twitter.com/LongHornDS" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter no-border"></i></a>
-                    <a href="https://www.instagram.com/longhorn.ds/" data-toggle="tooltip" data-placement="bottom" data-original-title="Instagram"><i class="fa fa-instagram ic-instagram no-border"></i></a>
-                    <a href="https://www.linkedin.com/company/long-horn-ds" data-toggle="tooltip" data-placement="bottom" data-original-title="LinkedIn"><i class="fa fa-linkedin ic-linkedin no-border"></i></a>
+                    <a href="@System.Configuration.ConfigurationManager.AppSettings["Facebook"]" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook no-border"></i></a>
+                    <a href="@System.Configuration.ConfigurationManager.AppSettings["Twitter"]" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter no-border"></i></a>
+                    <a href="@System.Configuration.ConfigurationManager.AppSettings["Instagram"]" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="Instagram"><i class="fa fa-instagram ic-instagram no-border"></i></a>
+                    <a href="@System.Configuration.ConfigurationManager.AppSettings["linkedin"]" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="LinkedIn"><i class="fa fa-linkedin ic-linkedin no-border"></i></a>
 
                 </div>
             </div>
@@ -140,10 +140,10 @@
                             </div>
                             <div class="socials">
                                 <div class="social-list half-icons" itemprop="associatedMedia">
-                                    <a href="https://www.facebook.com/longhorn.ds/"><i class="fa fa-facebook ic-facebook ic-colored sm-icon sm-icon"></i><span></span></a>
-                                    <a href="https://twitter.com/LongHornDS"><i class="fa fa-twitter ic-twitter ic-colored sm-icon"></i><span></span></a>
-                                    <a href="https://www.instagram.com/longhorn.ds/"><i class="fa fa-instagram ic-instagram ic-colored sm-icon"></i><span></span></a>
-                                    <a href="https://www.linkedin.com/company/long-horn-ds"><i class="fa fa-linkedin ic-linkedin ic-colored sm-icon"></i><span></span></a>
+                                    <a href="@System.Configuration.ConfigurationManager.AppSettings["Facebook"]" target="_blank"><i class="fa fa-facebook ic-facebook ic-colored sm-icon sm-icon"></i><span></span></a>
+                                    <a href="@System.Configuration.ConfigurationManager.AppSettings["Twitter"]" target="_blank"><i class="fa fa-twitter ic-twitter ic-colored sm-icon"></i><span></span></a>
+                                    <a href="@System.Configuration.ConfigurationManager.AppSettings["Instagram"]" target="_blank"><i class="fa fa-instagram ic-instagram ic-colored sm-icon"></i><span></span></a>
+                                    <a href="@System.Configuration.ConfigurationManager.AppSettings["linkedin"]" target="_blank"><i class="fa fa-linkedin ic-linkedin ic-colored sm-icon"></i><span></span></a>
                                 </div>
                             </div>
                         </div>
@@ -161,10 +161,10 @@
                             <h3>Locate Us</h3>
                             <ul class="details">
                                 @*<li><i class="fa fa-map-marker" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="address">Long Horn Driving School,<br> 6400 Independence Pkwy,<br> Plano, Texas 75023</span></li>*@
-                                <li><i class="fa fa-map-marker" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="address">Long Horn Driving School,<br> Plano, Texas 75023</span></li>
-                                <li><i class="fa fa-envelope"></i><span itemprop="email">Enquiries: <a href="mailto:info@lhdrivingschool.com">info@lhdrivingschool.com</a></span></li>
 
-                                <li><i class="fa fa-phone"></i><span itemprop="telephone">Phone: 972 372 4120</span></li>
+                                <li><i class="fa fa-map-marker" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="address">Long Horn Driving School,<br> Plano, Texas 75023</span></li>
+                                <li><i class="fa fa-envelope"></i><span itemprop="email">Enquiries: <a href="@System.Configuration.ConfigurationManager.AppSettings["Email"]">info@lhdrivingschool.com</a></span></li>
+                                <li><i class="fa fa-phone"></i><span itemprop="telephone">Phone: @System.Configuration.ConfigurationManager.AppSettings["Phone"]</span></li>
                                 <li><i class="fa fa-clock-o" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="openingHours" content="09:00-18:00 Su, Mo, Tu, We, Th, Fr, Sa">Operating Hours: <br> 9:00 AM to 6:00 PM / 7 Days</span></li>
                             </ul>
                         </div>
@@ -173,8 +173,7 @@
                             <h3>Route Map</h3>
                             <div class="recent-posts-footer" itemprop="map">
                                 <a href="contactus#maps_lhds">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53504.28006746682!2d-96.76625103079903!3d33.05600599671638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c181490a187ab%3A0x7a49fe62c2f8068b!2sPlano%2C%20TX%2075023%2C%20USA!5e0!3m2!1sen!2sbd!4v1577960807457!5m2!1sen!2sbd" width="263" height="206" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
+                                    <iframe src="@System.Configuration.ConfigurationManager.AppSettings["GoogleMap"]" width="263" height="206" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                 </a>
                             </div>
                         </div>
