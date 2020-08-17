@@ -67,7 +67,7 @@ namespace LHDS.Controllers
                 {
                     ViewBag.Message = "Your mail sent.";
 
-                    string body = "Hi,<br /><br />The following information has been submitted from the Long Horn Driving School Contact form:" + "<br/>" + "<br/>" +
+                    string body = "Hi,<br /><br />The following information has been submitted from the Learning Hub Driving School Contact form:" + "<br/>" + "<br/>" +
                         "<table style=\"color:black !important;\">" +
                        "<tr>" +
                        "<td style=\"width:150px;\">" + "<strong>Name</strong>" + "</td>" +
@@ -84,7 +84,7 @@ namespace LHDS.Controllers
                        "<tr>" +
                        "<td style=\"width:150px;\">" + "<strong>Message</strong>" + "</td>" +
                        "<td>" + Server.HtmlEncode(model.Contacts.Message) + "</td>" +
-                       "</tr>" + "</table>" + "<br/>Thanks and regards,<br/><b>Long Horn Driving School Development Team.</b>" + "<br/>[This is an automatically generated email, please do not reply]";
+                       "</tr>" + "</table>" + "<br/>Thanks and regards,<br/><b>Learning Hub Driving School Development Team.</b>" + "<br/>[This is an automatically generated email, please do not reply]";
 
 
                     MailMessage mail = new MailMessage();
@@ -98,7 +98,7 @@ namespace LHDS.Controllers
                     //mail.To.Add(StaticData.TestEmailAddress);
                     mail.CC.Add(StaticData.AdminEmailAddress);
                     mail.Bcc.Add(StaticData.AdminEmailAddress);
-                    mail.Subject = "Contact request from Long Horn Driving School website";
+                    mail.Subject = "Contact request from Learning Hub Driving School website";
                     mail.IsBodyHtml = true;
                     mail.Body = body;
                     smtpServer.Send(mail);
@@ -155,7 +155,7 @@ namespace LHDS.Controllers
                 {
                     ViewBag.Message = "Your Email Sent.";
 
-                    string body = "Hi,<br/><br/>The following information has been submitted from the Long Horn Driving School Appointment form:" + "<br/>" + "<br/>" +
+                    string body = "Hi,<br/><br/>The following information has been submitted from the Learning Hub Driving School Appointment form:" + "<br/>" + "<br/>" +
                             "<table style=\"color:black !important;\">" +
                            "<tr>" +
                            "<td style=\"width:150px;\">" + "<strong>Date</strong>" + "</td>" +
@@ -180,7 +180,7 @@ namespace LHDS.Controllers
                            "<tr>" +
                            "<td style=\"width:150px;\">" + "<strong>Permit Number</strong>" + "</td>" +
                            "<td>" + Server.HtmlEncode(model.Appointments.LearnersPermitNumber) + "</td>" +
-                           "</tr>" + "</table>" + "<br/>Thanks and regards,<br/><b>Long Horn Driving School Development Team.</b>" + "<br/>[This is an automatically generated email, please do not reply]";
+                           "</tr>" + "</table>" + "<br/>Thanks and regards,<br/><b>Learning Hub Driving School Development Team.</b>" + "<br/>[This is an automatically generated email, please do not reply]";
 
                     MailMessage mail = new MailMessage();
                     SmtpClient smtpServer = new SmtpClient(StaticData.SMTPClient);
@@ -193,7 +193,7 @@ namespace LHDS.Controllers
                     //mail.To.Add(StaticData.TestEmailAddress);
                     mail.CC.Add(StaticData.AdminEmailAddress);
                     mail.Bcc.Add(StaticData.AdminEmailAddress);
-                    mail.Subject = "Appointment request from Long Horn Driving School website";
+                    mail.Subject = "Appointment request from Learning Hub Driving School website";
                     mail.IsBodyHtml = true;
                     mail.Body = body;
                     smtpServer.Send(mail);
