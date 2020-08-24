@@ -38,6 +38,17 @@
             margin: 5px;
         }
     </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176144355-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-176144355-1');
+    </script>
+
 </head>
 <body>
     <!-- site preloader start -->
@@ -86,15 +97,22 @@
                                 <li>
                                     <a href="#" itemprop="url"><span><i class="fa fa-car fa-2x"></i>Services</span></a>
                                     <ul>
-                                        <li><a href="services" itemprop="url"><i class="fa fa-graduation-cap fa-2x"></i>In Car Training</a></li>
+                                        @*<li><a href="services" itemprop="url"><i class="fa fa-graduation-cap fa-2x"></i>In Car Training</a></li>*@
+                                        <li><a href="incartraining" itemprop="url"><i class="fa fa-graduation-cap fa-2x"></i>In Car Training</a></li>
+                                        <li><a href="tpstdrivingtest" itemprop="url"><i class="fa fa-graduation-cap fa-2x"></i>TPST Driving Test</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contactus" itemprop="url"><span><i class="fa fa-map-marker fa-2x"></i>Contact Us</span></a></li>
                                 <li>
                                     <a href="#" itemprop="url"><span><i class="fa fa-paper-plane fa-2x"></i>DPS Impact Cources</span></a>
                                     <ul>
-                                        <li><a href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" itemprop="url" target="DPS"><i class="fa fa-paperclip fa-2x"></i>DPS</a></li>
-                                        <li><a href="https://impacttexasdrivers.dps.texas.gov/" itemprop="url" target="_ITD"><i class="fa fa-paperclip fa-2x"></i>ITD</a></li>
+                                        @*<li><a href="https://www.dps.texas.gov/administration/driver_licensing_control/rolodex/search.asp" itemprop="url" target="DPS"><i class="fa fa-paperclip fa-2x"></i>DPS</a></li>
+                                        <li><a href="https://impacttexasdrivers.dps.texas.gov/" itemprop="url" target="_ITD"><i class="fa fa-paperclip fa-2x"></i>ITD</a></li>*@
+
+                                        <li><a href="https://www.dps.texas.gov/rolodex/search.asp" itemprop="url" target="_blank"><i class="fa fa-paperclip fa-2x"></i>DPS</a></li>
+                                        <li><a href="https://impacttexasdrivers.dps.texas.gov/ITTD/Profile/Signup.aspx" itemprop="url" target="_blank"><i class="fa fa-paperclip fa-2x"></i>ITTD (ages 16-17)</a></li>
+                                        <li><a href="https://impacttexasdrivers.dps.texas.gov/ITYD/Profile/Signup.aspx" itemprop="url" target="_blank"><i class="fa fa-paperclip fa-2x"></i>ITYD (ages 18-24)</a></li>
+                                        <li><a href="https://www.dps.texas.gov/internetforms/forms/dl-7.pdf" itemprop="url" target="_blank"><i class="fa fa-paperclip fa-2x"></i>Texas Drivers Handbook</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -113,9 +131,10 @@
                         <div class="cta_btn">
                             <div class="f-left" itemprop="text" itemscope itemtype="http://schema.org/Offer">
                                 <h2 class="cta_heading uppercase white">STUDENT Free Pick-Up and Return @*for the Following Cities:*@ please contact us.</h2>
+                                <h4 class="cta_heading white" style="letter-spacing: normal;">We will organize third party skills test (TPST)</h4>
                                 @*<h4 class="cta_heading white" style="letter-spacing: normal;">Collin county- Plano, Dallas County- Irving.</h4>*@
                             </div>
-                            <a class="btn btn-xl btn-outlined btn-white f-right" href="contactus" itemprop="url">Contact Us</a>
+                            <a class="btn btn-xl btn-outlined btn-white f-right btn-height" href="contactus" itemprop="url">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -152,7 +171,8 @@
                             <h3>Services</h3>
                             <div class="recent-posts-footer">
                                 <ul>
-                                    <li><a href="services" itemprop="url">In Car Training</a></li>
+                                    <li><a href="incartraining" itemprop="url">In Car Training</a></li>
+                                    <li><a href="tpstdrivingtest" itemprop="url">TPST Driving Test</a></li>
                                 </ul>
                             </div>
                         </div>

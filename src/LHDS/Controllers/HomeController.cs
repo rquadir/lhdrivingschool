@@ -237,7 +237,21 @@ namespace LHDS.Controllers
 
         // GET: Home
         //[Route("Services")]
-        public ActionResult Services()
+        //public ActionResult Services()
+        //{
+        //    return View();
+        //}
+
+        // GET: Home
+        //[Route("Services")]
+        public ActionResult InCarTraining()
+        {
+            return View();
+        }
+
+        // GET: Home
+        //[Route("Services")]
+        public ActionResult TPSTDrivingTest()
         {
             return View();
         }
