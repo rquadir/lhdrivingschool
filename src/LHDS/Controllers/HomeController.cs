@@ -251,7 +251,7 @@ namespace LHDS.Controllers
 
         // GET: Home
         //[Route("Services")]
-        public ActionResult TPSTDrivingTest()
+        public ActionResult DrivingTest()
         {
             return View();
         }

@@ -145,6 +145,7 @@
     <Content Include="Content\assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\assets\images\bgs\service\services-1.jpg" />
     <Content Include="Content\assets\images\bgs\service\services-10.jpg" />
+    <Content Include="Content\assets\images\bgs\service\services-11.jpg" />
     <Content Include="Content\assets\images\bgs\service\services-2.jpg" />
     <Content Include="Content\assets\images\bgs\service\services-3.jpg" />
     <Content Include="Content\assets\images\bgs\service\services-4.jpg" />
@@ -172,6 +173,8 @@
     <Content Include="Content\assets\images\carwheel-loader.gif" />
     <Content Include="Content\assets\images\Car_1.png" />
     <Content Include="Content\assets\images\Car_2.png" />
+    <Content Include="Content\assets\images\logo\logo-2.ico" />
+    <Content Include="Content\assets\images\logo\logo-2.png" />
     <Content Include="Content\assets\images\logo\logo.ico" />
     <Content Include="Content\assets\images\logo\logo.png" />
     <Content Include="Content\assets\images\map_area.png" />
@@ -329,6 +332,8 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Home\InCarTraining.cshtml" />
+    <Content Include="Views\Home\DrivingTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
