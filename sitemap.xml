@@ -9,42 +9,37 @@
 
 <url>
   <loc>http://lhdrivingschool.com/</loc>
-  <lastmod>2019-10-21T07:53:54+00:00</lastmod>
+  <lastmod>2020-09-15T08:36:58+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>http://lhdrivingschool.com/aboutus</loc>
-  <lastmod>2019-10-21T07:53:54+00:00</lastmod>
+  <lastmod>2020-09-15T08:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://lhdrivingschool.com/incartraining</loc>
+  <lastmod>2020-09-15T08:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://lhdrivingschool.com/drivingtest</loc>
+  <lastmod>2020-09-15T08:36:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lhdrivingschool.com/contactus</loc>
-  <lastmod>2019-10-21T07:53:54+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://lhdrivingschool.com/services</loc>
-  <lastmod>2019-10-21T07:53:54+00:00</lastmod>
+  <lastmod>2020-09-15T08:36:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lhdrivingschool.com/vision</loc>
-  <lastmod>2019-10-21T07:53:54+00:00</lastmod>
+  <lastmod>2020-09-15T08:36:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lhdrivingschool.com/commitment</loc>
-  <lastmod>2019-10-21T07:53:54+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://lhdrivingschool.com/ContactUs</loc>
-  <lastmod>2019-10-21T07:53:54+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://lhdrivingschool.com/Index</loc>
-  <lastmod>2019-10-21T07:53:54+00:00</lastmod>
+  <lastmod>2020-09-15T08:36:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
