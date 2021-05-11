@@ -251,16 +251,23 @@ header ul,footer ul,.top-bar ul,.lft-tools ul,.post-info ul,.recent-posts-widget
 	height:100px;
 }
 .top-head .title {
-	position:relative;
-	float:left;
-	padding-top: 30px;
-	padding-left: 10px; 
+    position: relative;
+    float: left;
+    padding: 35px 10px 35px;
 }
 .top-head .title h1, h4{
-	line-height: 23px;
+	line-height: 18px;
+}
+.title h1{
+    font-size: 22px;
 }
 .top-head .title a{
 	display:block
+}
+.title h4 {
+    font-size: 16px;
+    letter-spacing: 2.45px;
+    margin-bottom: 0;
 }
 
 /* ----------------- top nav ------------------ */
@@ -291,7 +298,7 @@ header ul,footer ul,.top-bar ul,.lft-tools ul,.post-info ul,.recent-posts-widget
     line-height: 114px !important;
     display: block;
     position: relative;
-    padding: 0 15px;
+    padding: 0 12px;
     font-size: 14px;
     font-weight: bold;
 }
@@ -1618,9 +1625,12 @@ footer hr{
 .contact-widget p {
 	margin-bottom: 10px;
 }
+.pt-cls {
+    padding-top: 3rem;
+}
 .details li {
-	margin: 13px 0;
-	line-height: 1.4;
+    margin: 13px 0;
+    line-height: 1.4;
 }
 .details li i{
 	display:table-cell;
@@ -2293,16 +2303,16 @@ footer .testimonials-bg p,.testimonials-name{
     .top-head .title {
         position: relative;
         float: left;
-        padding-top: 34px;
-        padding-left: 10px;
+        padding: 35px 10px 35px;
     }
     .title h1 {
-        font-size: 30px;
+        font-size: 22px;
     }
-	.title h4{
-		line-height: 15px;
-    	font-size: 20px;
-	}
+    .title h4 {
+        line-height: 18px;
+        font-size: 16px;
+        letter-spacing: 2.45px;
+    }
 	.title a{
 		display:block
 	}
@@ -2610,11 +2620,13 @@ footer .testimonials-bg p,.testimonials-name{
 	.font-70{font-size:20px;
 	}
     .title h1 {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .title h4 {
-        font-size: 17px;
+        font-size: 12px;
+        line-height: 6px;
+        letter-spacing: 1.85px;
     }
 
     .top-head .logo img, .top-bar .f-right, .top-bar .f-left {
@@ -2634,8 +2646,7 @@ footer .testimonials-bg p,.testimonials-name{
     .top-head .title {
         position: relative;
         float: left;
-        padding-top: 33px;
-        padding-left: 5px;
+        padding: 37.5px 5px 37.5px;
     }
     .icon-box.simple, .icon-box-2, .icon-box {
         margin: 15px -10px !important;
@@ -2678,6 +2689,8 @@ footer .testimonials-bg p,.testimonials-name{
     }
     .title h4 {
         font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 1.86px;
     }
     .top-head .logo img, .top-bar .f-right, .top-bar .f-left {
         display: table-column;
@@ -2694,8 +2707,7 @@ footer .testimonials-bg p,.testimonials-name{
     .top-head .title {
         position: relative;
         float: left;
-        padding-top: 38px;
-        padding-left: 5px;
+        padding: 36px 5px 25px;
     }
     h4.cta_heading.white {
         font-size: 14px;
