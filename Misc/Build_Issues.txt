@@ -1,0 +1,13 @@
+If any error found during running the code like following - 
+
+"Could not find a part of the path … bin\roslyn\csc.exe"
+
+Please open NuGet Package Manager Console --
+In Visual Studio >> Tools >> NuGet Package Manager >> Package Manager Console 
+and execute the following command - 
+
+PM > update-package microsoft.codedom.providers.dotnetcompilerplatform -r
+
+
+------------------------------
+Hope this will resolve the problem. Thank you.
