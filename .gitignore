@@ -14,3 +14,4 @@
 /src/LHDS/obj/Release
 /src/LHDS/Properties/PublishProfiles
 /src/LHDS/obj/Debug
+*.user
