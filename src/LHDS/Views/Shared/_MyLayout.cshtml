@@ -83,7 +83,7 @@
                     </div>
                     <div class="title" itemprop="brand" itemscope itemtype="http://schema.org/Organization">
                         <a href="@Url.Content("~/")" itemprop="url">
-                            <h1 itemprop="name"><span style="color: #B70D03;">LEARNING</span> <span style="color: #003375;">HUB</span> DRIVING SCHOOL</h1>
+                            <h1 itemprop="name"><span style="color: #B70D03;">L</span><span style="color: #003375;">H</span>(<span style="color: #B70D03;">LEARNING</span> <span style="color: #003375;">HUB</span>) DRIVING SCHOOL</h1>
                             <h4 itemprop="description" style="color: #0067CB;">Your Friendly, Expert Driving School</h4>
                         </a>
                     </div> <!-- Logo end -->
@@ -95,11 +95,11 @@
                                 <li class="homenav selected"><a href="/" itemprop="url"><span><i class="fa fa-home fa-2x"></i></span></a></li>
                                 <li><a href="aboutus" itemprop="url"><span><i class="fa fa-users fa-2x" aria-hidden="true"></i>About Us</span></a></li>
                                 <li>
-                                    <a href="#" itemprop="url"><span><i class="fa fa-car fa-2x"></i>Services</span></a>
-                                    <ul>
+                                    <a href="services" itemprop="url"><span><i class="fa fa-car fa-2x"></i>Services</span></a>
+                                    @*<ul>
                                         <li><a href="incartraining" itemprop="url"><i class="fa fa-cogs fa-2x"></i>Behind the Wheel (In Car Training)</a></li>
                                         <li><a href="drivingtest" itemprop="url"><i class="fa fa-cogs fa-2x"></i>DPS Road Test (Driving Test)</a></li>
-                                    </ul>
+                                    </ul>*@
                                 </li>
                                 <li>
                                     <a href="#" itemprop="url"><span><i class="fa fa-bullhorn fa-2x"></i>Online Courses</span></a>
@@ -114,9 +114,9 @@
                                 <li>
                                     <a href="#" itemprop="url"><span><i class="fa fa-paper-plane fa-2x"></i>DPS Impact Courses</span></a>
                                     <ul>
-                                        <li><a href="https://www.dps.texas.gov/rolodex/search.asp" itemprop="url" target="_dps"><i class="fa fa-paperclip fa-2x"></i>DPS</a></li>
                                         <li><a href="https://impacttexasdrivers.dps.texas.gov/ITTD/Profile/Signup.aspx" itemprop="url" target="_ittd"><i class="fa fa-paperclip fa-2x"></i>ITTD (ages 16-17)</a></li>
                                         <li><a href="https://impacttexasdrivers.dps.texas.gov/ITYD/Profile/Signup.aspx" itemprop="url" target="_ityd"><i class="fa fa-paperclip fa-2x"></i>ITYD (ages 18-24)</a></li>
+                                        <li><a href="https://www.dps.texas.gov/rolodex/search.asp" itemprop="url" target="_dps"><i class="fa fa-paperclip fa-2x"></i>DPS</a></li>
                                         <li><a href="https://www.dps.texas.gov/internetforms/forms/dl-7.pdf" itemprop="url" target="_driverHandbook"><i class="fa fa-paperclip fa-2x"></i>Texas Drivers Handbook</a></li>
                                     </ul>
                                 </li>
@@ -135,8 +135,9 @@
                     <div class="container">
                         <div class="cta_btn">
                             <div class="f-left" itemprop="text" itemscope itemtype="http://schema.org/Offer">
-                                <h2 class="cta_heading uppercase yellow-color">We will organize third party skills test (TPST) / DPS Road Test</h2>
-                                <h4 class="cta_heading white" style="letter-spacing: normal;">Student free pick-up and return, please contact us.</h4>
+                                @*<h2 class="cta_heading uppercase yellow-color">We will organize third party skills test (TPST) / DPS Road Test</h2>*@
+                                <h2 class="cta_heading uppercase yellow-color">We will organize DPS Road Test (TPST)</h2>
+                                <h4 class="cta_heading white" style="letter-spacing: normal;">Student pick-up and return, please contact us.</h4>
                             </div>
                             <a class="btn btn-xl btn-outlined btn-white f-right btn-height" href="contactus" itemprop="url">Contact Us</a>
                         </div>
@@ -175,8 +176,11 @@
                             <h3>Services</h3>
                             <div class="recent-posts-footer">
                                 <ul>
-                                    <li><a href="incartraining" itemprop="url">In Car Training</a></li>
-                                    <li><a href="drivingtest" itemprop="url">Driving Test</a></li>
+                                    @*<li><a href="incartraining" itemprop="url">In Car Training</a></li>
+        <li><a href="drivingtest" itemprop="url">Driving Test</a></li>*@
+                                    <li><a href="services" itemprop="url">In Car Training(Behind the wheel)</a></li>
+                                    <li><a href="services" itemprop="url">DPS Road/Driving Test</a></li>
+                                    <li><a href="#" itemprop="url">Online Courses</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -186,10 +190,10 @@
                             <ul class="details">
                                 @*<li><i class="fa fa-map-marker" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="address">Learning Hub Driving School,<br> 6400 Independence Pkwy,<br> Plano, Texas 75023</span></li>*@
 
-                                <li><i class="fa fa-map-marker" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="address">Learning Hub Driving School,<br> Plano, Texas 75023</span></li>
+                                <li><i class="fa fa-map-marker" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="address">LH (Learning Hub) Driving School,<br> Plano, Texas 75023</span></li>
                                 <li><i class="fa fa-envelope"></i><span itemprop="email">Enquiries: <a href="@System.Configuration.ConfigurationManager.AppSettings["Email"]">info@lhdrivingschool.com</a></span></li>
                                 <li><i class="fa fa-phone"></i><span itemprop="telephone">Phone: @System.Configuration.ConfigurationManager.AppSettings["Phone"]</span></li>
-                                <li><i class="fa fa-clock-o" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="openingHours" content="09:00-18:00 Su, Mo, Tu, We, Th, Fr, Sa">Operating Hours: <br> 9:00 AM to 6:00 PM / 7 Days</span></li>
+                                <li><i class="fa fa-clock-o" style="padding-top: 3px; vertical-align: top;"></i><span itemprop="openingHours" content="09:00-17:00 Su, Mo, Tu, We, Th, Fr, Sa">Operating Hours: <br> 9:00 AM to 5:00 PM / 7 Days</span></li>
                             </ul>
                         </div>
 
@@ -211,7 +215,7 @@
                 <div class="container">
                     <div class="row">
                         <!-- footer copyrights left cell -->
-                        <div class="copyrights" itemprop="name">© Copyrights <a href="/"><b class="main-color" itemprop="name">Learning Hub Driving School</b></a>. All rights reserved.</div>
+                        <div class="copyrights" itemprop="name">© Copyrights <a href="/"><b class="main-color" itemprop="name">LH (Learning Hub) Driving School</b></a>. All rights reserved.</div>
                         <div class="web-solution">Web Solution by <a href="http://www.simplexhub.com/" itemprop="author" target="_Simplexhub"><b class="main-color">Simplexhub</b></a></div>
                     </div>
                 </div>

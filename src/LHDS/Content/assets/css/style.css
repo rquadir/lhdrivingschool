@@ -258,8 +258,9 @@ header ul,footer ul,.top-bar ul,.lft-tools ul,.post-info ul,.recent-posts-widget
 .top-head .title h1, h4{
 	line-height: 18px;
 }
-.title h1{
-    font-size: 22px;
+.title h1 {
+	/*font-size: 22px;*/
+	font-size: 20px;
 }
 .top-head .title a{
 	display:block

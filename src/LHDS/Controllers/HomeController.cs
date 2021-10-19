@@ -237,10 +237,10 @@ namespace LHDS.Controllers
 
         // GET: Home
         //[Route("Services")]
-        //public ActionResult Services()
-        //{
-        //    return View();
-        //}
+        public ActionResult Services()
+        {
+            return View();
+        }
 
         // GET: Home
         //[Route("Services")]
