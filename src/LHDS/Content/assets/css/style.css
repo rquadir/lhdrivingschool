@@ -2789,3 +2789,37 @@ footer .testimonials-bg p,.testimonials-name{
     left: 0% !important;
     margin: 0 auto !important;
 }
+
+/*----------service-box----------*/
+.service-title {
+	font-size: 33px;
+	margin-bottom: 10px;
+	padding: 10px 0px;
+	text-transform: uppercase;
+	text-align:center;
+}
+.service-box {
+	border: 2px solid #26abff;
+	padding-top: 15px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.service-box h4 {
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #26abff;
+	margin-bottom: 20px;
+}
+
+.cancel-service{
+	font-size: 20px;
+	font-weight:700;
+	color:red;
+	margin-bottom:20px
+}
+
+.dps-appointment-btn {
+	margin: 0 auto;
+	display: table;
+}
