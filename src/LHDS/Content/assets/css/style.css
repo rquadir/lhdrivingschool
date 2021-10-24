@@ -2830,3 +2830,7 @@ footer .testimonials-bg p,.testimonials-name{
 .table > tbody > tr > td {
 	color: #000;
 }
+.custom-width {
+	min-width:100px;
+	width:20%;
+}
